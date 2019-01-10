@@ -8,14 +8,17 @@
 package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team79.robot.vision.GripPipeline;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command
+.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.vision.VisionThread;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -28,7 +31,14 @@ public class Robot extends TimedRobot {
 	public static OI oi;
 	public static DriveTrain driveTrain;
 	CameraServer server;
-
+	
+	private static final int IMAGE_HEIGHT = 480;
+	private static final int IMAGE_WIDTH = 640;
+	
+	private VisionThread visionThread;
+	private double centerX = 0.0;
+	private final Object imgLock = new Object();
+	
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
 
@@ -36,7 +46,6 @@ public class Robot extends TimedRobot {
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
-	@Override
 	public void robotInit() {
 		oi = new OI();
 		driveTrain = new DriveTrain();
@@ -44,7 +53,7 @@ public class Robot extends TimedRobot {
 		SmartDashboard.putData("Auto mode", m_chooser);
 	    
 		UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-        camera.setResolution(640, 480);
+        camera.setResolution(IMAGE_WIDTH, IMAGE_HEIGHT);
 		
 	}
 
@@ -53,12 +62,11 @@ public class Robot extends TimedRobot {
 	 * You can use it to reset any subsystem information you want to clear when
 	 * the robot is disabled.
 	 */
-	@Override
+	
 	public void disabledInit() {
 
 	}
 
-	@Override
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
 	}
