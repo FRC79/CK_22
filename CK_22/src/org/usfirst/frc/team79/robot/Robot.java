@@ -8,6 +8,7 @@
 package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team79.robot.subsystems.Elevator;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
@@ -27,6 +28,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends TimedRobot {
 	public static OI oi;
 	public static DriveTrain driveTrain;
+	public static Elevator elevator;
 	CameraServer server;
 
 	Command m_autonomousCommand;
@@ -40,6 +42,8 @@ public class Robot extends TimedRobot {
 	public void robotInit() {
 		oi = new OI();
 		driveTrain = new DriveTrain();
+		elevator = new Elevator();
+		
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser);
 	    

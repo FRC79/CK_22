@@ -19,4 +19,7 @@ public class RobotMap {
 	public static final int frontRightTalon = 1;
 	public static final int backLeftTalon = 2;
 	public static final int backRightTalon = 3;
+	
+	//Elevator Talon
+	public static final int elevatorTalon = 4;
 }
