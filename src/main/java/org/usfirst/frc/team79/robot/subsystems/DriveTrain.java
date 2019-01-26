@@ -15,27 +15,22 @@ public class DriveTrain extends Subsystem {
 	public DifferentialDrive drive;	
 	public DriveTrain()
 	{
-		frontLeft = new WPI_TalonSRX (RobotMap.frontLeftTalon);
+		frontLeft = new WPI_TalonSRX (RobotMap.frontLeftTalon); //initialize talons
 		frontRight = new WPI_TalonSRX(RobotMap.frontRightTalon);
 		backLeft = new WPI_TalonSRX(RobotMap.backLeftTalon);
 		backRight = new WPI_TalonSRX(RobotMap.backRightTalon);
-		drive = new DifferentialDrive(frontLeft, frontRight);
+		drive = new DifferentialDrive(frontLeft, frontRight);//Initializes drive train
 		
-		backLeft.follow(frontLeft);
-		backRight.follow(frontRight);
+		backLeft.follow(frontLeft); //backLeft follows frontLeft
+		backRight.follow(frontRight); //backRight follows frontRight
 
-	
-		frontLeft.setInverted(false);
-		backLeft.setInverted(InvertType.FollowMaster);
-		frontRight.setInverted(true);
-		backRight.setInverted(InvertType.FollowMaster);
-
-		drive.setRightSideInverted(false);
+		frontRight.setInverted(true); //makes the right side of the drive train go forward 
+		backRight.setInverted(InvertType.FollowMaster); 
 	}
 
 	@Override
 	protected void initDefaultCommand() {
-		this.setDefaultCommand(new ArcadeDrive());
+		this.setDefaultCommand(new ArcadeDrive()); //VERY IMPORTANT!!! Sets the arcade drive command as default for the subsystem
 	
 	}
 

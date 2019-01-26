@@ -7,12 +7,16 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class ArcadeDrive extends Command{
 		public ArcadeDrive () {
-			requires(Robot.driveTrain);
+			requires(Robot.driveTrain); //Specifies the subsystem that is used by this command
 		}
 		
 	// Called just before this Command runs the first time
 		@Override
 		protected void initialize() {
+			/*
+			 Resets the talons
+			*/
+
 			Robot.driveTrain.frontLeft.configFactoryDefault();
 			Robot.driveTrain.frontRight.configFactoryDefault();
 			Robot.driveTrain.backLeft.configFactoryDefault();
@@ -22,10 +26,11 @@ public class ArcadeDrive extends Command{
 		// Called repeatedly when this Command is scheduled to run
 		@Override
 		protected void execute() {
-			double forward = -1.0 * Robot.oi.drive.getY();	// Sign this so forward is positive
-			double turn = +1.0 * Robot.oi.drive.getZ();    // Sign this so right is positive
-			Robot.driveTrain.drive.arcadeDrive(forward, turn);
-		    //System.out.println("Turn: " + turn);
+			double forward = -1.0  * Robot.oi.drive.getY(); //gets joystick values to move forward and back
+			//"-" makes forward	go forward on the joystick
+			double turn = Robot.oi.drive.getZ();    //turns left and right
+			Robot.driveTrain.drive.arcadeDrive(forward, turn); //passes joystick values into drive mechanism
+		   
 		}
 		
 		// Make this return true when this Command no longer needs to run execute()
