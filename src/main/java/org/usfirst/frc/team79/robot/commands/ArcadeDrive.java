@@ -23,8 +23,9 @@ public class ArcadeDrive extends Command{
 		@Override
 		protected void execute() {
 			double forward = -1.0 * Robot.oi.drive.getY();	// Sign this so forward is positive
-			double turn = +1.0 * Math.abs(Robot.oi.drive.getZ());    // Sign this so right is positive
+			double turn = +1.0 * Robot.oi.drive.getZ();    // Sign this so right is positive
 			Robot.driveTrain.drive.arcadeDrive(forward, turn);
+		    //System.out.println("Turn: " + turn);
 		}
 		
 		// Make this return true when this Command no longer needs to run execute()
