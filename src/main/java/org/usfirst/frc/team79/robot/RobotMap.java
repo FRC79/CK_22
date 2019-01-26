@@ -15,6 +15,9 @@ package org.usfirst.frc.team79.robot;
  */
 public class RobotMap {
 	//Talons
+	/*
+	*Sets ID numbers for the talons
+	*/
 	public static final int frontLeftTalon = 1;
 	public static final int frontRightTalon = 2; 
 	public static final int backLeftTalon = 3;

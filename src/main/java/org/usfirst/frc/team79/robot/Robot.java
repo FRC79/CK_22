@@ -38,14 +38,14 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotInit() {
 		/*
-		*  	
+		* Initializes the different subsystems 	
 		*/
 		driveTrain = new DriveTrain();
 		oi = new OI();
 		elevator = new Elevator();
 		intake = new Intake();
 	    
-		camera = CameraServer.getInstance().startAutomaticCapture(0);
+		camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
 		camera.setResolution(640, 480);
 		
 		camera2 = CameraServer.getInstance().startAutomaticCapture(1);

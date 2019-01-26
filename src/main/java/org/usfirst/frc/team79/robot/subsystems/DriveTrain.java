@@ -9,6 +9,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
+//subsystem to control drive train
 public class DriveTrain extends Subsystem {
 	
 	public WPI_TalonSRX frontLeft, frontRight, backLeft, backRight;

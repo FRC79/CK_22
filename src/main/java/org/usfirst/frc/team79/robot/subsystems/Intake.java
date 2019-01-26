@@ -6,7 +6,7 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-
+//subsystem to control intake
 public class Intake extends Subsystem {
 	
 	public TalonSRX leftMotor, rightMotor; //Declares talons that will control left and right intake

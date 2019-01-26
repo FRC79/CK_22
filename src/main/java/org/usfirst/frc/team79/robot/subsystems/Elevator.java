@@ -8,6 +8,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+//creates subsystem to control elevator
 public class Elevator extends Subsystem {
 
 	public TalonSRX talon;
