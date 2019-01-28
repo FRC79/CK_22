@@ -27,6 +27,8 @@ public class DriveTrain extends Subsystem {
 
 		frontRight.setInverted(true); //makes the right side of the drive train go forward 
 		backRight.setInverted(InvertType.FollowMaster); 
+
+		drive.setRightSideInverted(false);
 	}
 
 	@Override

@@ -16,7 +16,6 @@ public class ArcadeDrive extends Command{
 			/*
 			 Resets the talons
 			*/
-
 			Robot.driveTrain.frontLeft.configFactoryDefault();
 			Robot.driveTrain.frontRight.configFactoryDefault();
 			Robot.driveTrain.backLeft.configFactoryDefault();

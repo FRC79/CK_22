@@ -14,19 +14,19 @@ package org.usfirst.frc.team79.robot;
  * floating around.
  */
 public class RobotMap {
-	//Talons
 	/*
 	*Sets ID numbers for the talons
 	*/
+	//Drive Talons
 	public static final int frontLeftTalon = 1;
 	public static final int frontRightTalon = 2; 
 	public static final int backLeftTalon = 3;
 	public static final int backRightTalon = 4; 
 	
-	//Elevator Talon
+	//Elevator Talons
 	public static final int elevatorTalon = 4;
 	
-	//Intake Talon
+	//Intake Talons
 	public static final int leftIntakeTalon = 5;
 	public static final int rightIntakeTalon = 6;
 }
