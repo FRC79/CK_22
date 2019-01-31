@@ -10,6 +10,7 @@ package org.usfirst.frc.team79.robot;
 import org.usfirst.frc.team79.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team79.robot.subsystems.Elevator;
 import org.usfirst.frc.team79.robot.subsystems.Intake;
+// import org.usfirst.frc.team79.robot.subsystems.Vision;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.cameraserver.CameraServer;
@@ -28,8 +29,9 @@ public class Robot extends TimedRobot {
 	public static DriveTrain driveTrain;
 	public static Elevator elevator;
 	public static Intake intake;
-	UsbCamera camera;
-	UsbCamera camera2;
+	// public static Vision vision;
+	public static UsbCamera camera;
+	public static UsbCamera camera2;
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -44,12 +46,12 @@ public class Robot extends TimedRobot {
 		oi = new OI();
 		elevator = new Elevator();
 		intake = new Intake();
-	    
+		// vision = new Vision();
 		camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
-		camera.setResolution(640, 480);
+		camera.setResolution(160, 120);
 		
 		camera2 = CameraServer.getInstance().startAutomaticCapture(1);
-		camera2.setResolution(640, 480);	
+		camera2.setResolution(160, 120);	
 	}
 
 	/**

@@ -7,7 +7,12 @@
 
 package org.usfirst.frc.team79.robot;
 
+// import org.usfirst.frc.team79.robot.commands.CameraFeed;
+
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -15,6 +20,14 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class OI {
 	public Joystick drive = new Joystick(0); //Initializes joystick
+	// public Joystick operator = new Joystick(1); 
+	Button button1 = new JoystickButton(drive, 2);
+	
+	public OI()
+	{
+		// button1.whenPressed(new CameraFeed());
+	}
+	
 	//public Joystick operator = new Joystick(1);
 	
 	//// CREATING BUTTONS
