@@ -28,9 +28,9 @@ public class RobotMap {
 	//Intake Talons
 	public static final int leftIntakeTalon = 7;
 	public static final int rightIntakeTalon = 8;
-	//Climber Talons
-	public static final int climber1Talon = 9;
-	public static final int climber2Talon = 10;
+	//Gripper Talons
+	public static final int gripper1Talon = 9;
+	public static final int gripper2Talon = 10;
 
 	//Pneumatics
 	public static final int INTAKE_DEPLOY_DOWN = 0;
@@ -38,6 +38,6 @@ public class RobotMap {
 	public static final int INTAKE_OPEN = 2;
 	public static final int INTAKE_CLOSE =3;
 	
-	public static final int CLIMBER_GRIP = 4;
-	public static final int CLIMBER_UNGRIP = 5;
+	public static final int GRIPPER_HUG = 4;
+	public static final int GRIPPER_UNHUG = 5;
 }
