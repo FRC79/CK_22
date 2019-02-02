@@ -34,7 +34,6 @@ public class OI {
 	{
 		intakeIn.whileHeld(new IntakeIn());
 		intakeOut.whileHeld(new IntakeOut());
-
 	}
 
 	

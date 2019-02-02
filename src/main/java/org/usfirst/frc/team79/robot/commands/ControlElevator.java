@@ -47,6 +47,7 @@ public class ControlElevator extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    Robot.elevator.stopMotors();
   }
 
   // Called when another command which requires one or more of the same
