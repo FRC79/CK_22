@@ -9,6 +9,7 @@ package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team79.robot.subsystems.Elevator;
+import org.usfirst.frc.team79.robot.subsystems.Gripper;
 import org.usfirst.frc.team79.robot.subsystems.Intake;
 
 // import edu.wpi.cscore.UsbCamera;
@@ -28,6 +29,7 @@ public class Robot extends TimedRobot {
 	public static DriveTrain driveTrain;
 	public static Elevator elevator;
 	public static Intake intake;
+	public static Gripper gripper;
 	// public static UsbCamera camera;
 	// public static UsbCamera camera2;
 
@@ -44,6 +46,7 @@ public class Robot extends TimedRobot {
 		oi = new OI();
 		elevator = new Elevator();
 		intake = new Intake();
+		gripper = new Gripper();
 
 		// camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
 		// camera.setResolution(160, 120);
