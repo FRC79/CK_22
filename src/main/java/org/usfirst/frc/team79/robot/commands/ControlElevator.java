@@ -7,7 +7,7 @@
 
 package org.usfirst.frc.team79.robot.commands;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
+// import com.ctre.phoenix.motorcontrol.ControlMode;
 
 import org.usfirst.frc.team79.robot.Robot;
 
