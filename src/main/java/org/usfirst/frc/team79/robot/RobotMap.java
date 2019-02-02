@@ -29,4 +29,13 @@ public class RobotMap {
 	//Intake Talons
 	public static final int leftIntakeTalon = 5;
 	public static final int rightIntakeTalon = 6;
+
+	//Pneumatics
+	public static final int INTAKE_DEPLOY_DOWN = 0;
+	public static final int INTAKE_DEPLOY_UP = 1;
+	public static final int INTAKE_OPEN = 2;
+	public static final int INTAKE_CLOSE =3;
+	
+	public static final int CLIMBER_GRIP = 4;
+	public static final int CLIMBER_UNGRIP = 5;
 }
