@@ -7,6 +7,9 @@
 
 package org.usfirst.frc.team79.robot;
 
+import org.usfirst.frc.team79.robot.commands.IntakeIn;
+import org.usfirst.frc.team79.robot.commands.IntakeOut;
+
 // import org.usfirst.frc.team79.robot.commands.Brake;
 
 // import org.usfirst.frc.team79.robot.commands.CameraFeed;
@@ -22,13 +25,16 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	public Joystick drive = new Joystick(0); //Initializes joystick
-	// public Joystick operator = new Joystick(1); 
-	Button button1 = new JoystickButton(drive, 2);
-	Button button2 = new JoystickButton(drive, 8);
+	public Joystick operator = new Joystick(1); 
+
+	public Button intakeIn = new JoystickButton(operator, 5);
+	public Button intakeOut = new JoystickButton(operator, 6);
 	
 	public OI()
 	{
-		
+		intakeIn.whileHeld(new IntakeIn());
+		intakeOut.whileHeld(new IntakeOut());
+
 	}
 
 	
