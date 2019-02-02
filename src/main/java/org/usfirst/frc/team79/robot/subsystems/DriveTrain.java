@@ -18,10 +18,10 @@ public class DriveTrain extends Subsystem {
 	public DifferentialDrive drive;	
 	public DriveTrain()
 	{
-		frontLeftMotor = new WPI_TalonSRX (RobotMap.frontLeftTalon); //initialize talons
-		frontRightMotor = new WPI_TalonSRX(RobotMap.frontRightTalon);
-		backLeftMotor = new WPI_VictorSPX(RobotMap.backLeftVictor);
-		backRightMotor = new WPI_VictorSPX(RobotMap.backRightVictor);
+		frontLeftMotor = new WPI_TalonSRX (RobotMap.frontLeftDriveTalon); //initialize talons
+		frontRightMotor = new WPI_TalonSRX(RobotMap.frontRightDriveTalon);
+		backLeftMotor = new WPI_VictorSPX(RobotMap.backLeftDriveVictor);
+		backRightMotor = new WPI_VictorSPX(RobotMap.backRightDriveVictor);
 		drive = new DifferentialDrive(frontLeftMotor, frontRightMotor);//Initializes drive train
 		
 		backLeftMotor.follow(frontLeftMotor); //backLeft follows frontLeft

@@ -17,23 +17,20 @@ public class RobotMap {
 	/*
 	*Sets ID numbers for the talons
 	*/
-	//Drive Talons
-	public static final int frontLeftTalon = 1;
-	public static final int frontRightTalon = 2; 
-	public static final int backLeftVictor= 3;
-	public static final int backRightVictor = 4; 
-	
+	//Drive Talons and Victors
+	public static final int frontLeftDriveTalon = 1;
+	public static final int frontRightDriveTalon = 2; 
+	public static final int backLeftDriveVictor= 3;
+	public static final int backRightDriveVictor = 4; 
 	//Elevator Talons
 	public static final int leftElevatorTalon = 5;
-	public static final int rightElevatorTalon = 6;
-	
+	public static final int rightElevatorTalon = 6; //Not used right now
 	//Intake Talons
 	public static final int leftIntakeTalon = 7;
 	public static final int rightIntakeTalon = 8;
-
 	//Climber Talons
-	public static final int leftClimberTalon = 9;
-	public static final int rightClimberTalon = 10;
+	public static final int climber1Talon = 9;
+	public static final int climber2Talon = 10;
 
 	//Pneumatics
 	public static final int INTAKE_DEPLOY_DOWN = 0;

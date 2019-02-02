@@ -19,14 +19,14 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Climber extends Subsystem {
   public DoubleSolenoid grip;
-  public TalonSRX leftMotor, rightMotor;
+  public TalonSRX motor1, motor2;
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   public Climber() {
     grip = new DoubleSolenoid(RobotMap.CLIMBER_GRIP, RobotMap.CLIMBER_UNGRIP);
-    leftMotor = new TalonSRX(RobotMap.leftClimberTalon);
-    rightMotor = new TalonSRX(RobotMap.rightClimberTalon);
+    motor1 = new TalonSRX(RobotMap.climber1Talon);
+    motor2 = new TalonSRX(RobotMap.climber2Talon);
 
   }
 
