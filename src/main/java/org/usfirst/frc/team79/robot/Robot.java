@@ -105,15 +105,9 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-	//BRAKE COMMAND 
-        if (gamepad1.right_bumper) {
-            robot.drivetrain().frontLeft.setPower(0);
-            robot.drivetrain().frontRight.setPower(0);
-            robot.DriveTrain().rearLeft.setPower(0);
-            robot.DriveTrain().rearRight.setPower(0);
-       	
-	}
 
+        
+	}
 	/**
 	 * This function is called periodically during test mode.
 	 */

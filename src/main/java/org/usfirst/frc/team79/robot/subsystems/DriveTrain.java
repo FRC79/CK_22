@@ -1,5 +1,6 @@
 package org.usfirst.frc.team79.robot.subsystems;
 
+import org.usfirst.frc.team79.robot.Robot;
 import org.usfirst.frc.team79.robot.RobotMap;
 import org.usfirst.frc.team79.robot.commands.ArcadeDrive;
 
@@ -30,7 +31,6 @@ public class DriveTrain extends Subsystem {
 
 		drive.setRightSideInverted(false);
 	}
-
 	@Override
 	protected void initDefaultCommand() {
 		this.setDefaultCommand(new ArcadeDrive()); //VERY IMPORTANT!!! Sets the arcade drive command as default for the subsystem
