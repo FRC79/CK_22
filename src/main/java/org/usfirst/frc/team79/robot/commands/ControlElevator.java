@@ -35,7 +35,7 @@ public class ControlElevator extends Command {
     {
       value = 0.1 * Robot.oi.operator.getY();
     }
-	  Robot.elevator.talon.set(ControlMode.PercentOutput, value);
+	  Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
   }
 
   // Make this return true when this Command no longer needs to run execute()

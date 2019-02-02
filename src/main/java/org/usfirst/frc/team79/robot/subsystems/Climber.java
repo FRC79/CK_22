@@ -7,6 +7,8 @@
 
 package org.usfirst.frc.team79.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 import org.usfirst.frc.team79.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
@@ -17,11 +19,15 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Climber extends Subsystem {
   public DoubleSolenoid grip;
+  public TalonSRX leftMotor, rightMotor;
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   public Climber() {
     grip = new DoubleSolenoid(RobotMap.CLIMBER_GRIP, RobotMap.CLIMBER_UNGRIP);
+    leftMotor = new TalonSRX(RobotMap.leftClimberTalon);
+    rightMotor = new TalonSRX(RobotMap.rightClimberTalon);
+
   }
 
   public void solenoidExpand() {

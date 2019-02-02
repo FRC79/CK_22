@@ -24,11 +24,16 @@ public class RobotMap {
 	public static final int backRightVictor = 4; 
 	
 	//Elevator Talons
-	public static final int elevatorTalon = 4;
+	public static final int leftElevatorTalon = 5;
+	public static final int rightElevatorTalon = 6;
 	
 	//Intake Talons
-	public static final int leftIntakeTalon = 5;
-	public static final int rightIntakeTalon = 6;
+	public static final int leftIntakeTalon = 7;
+	public static final int rightIntakeTalon = 8;
+
+	//Climber Talons
+	public static final int leftClimberTalon = 9;
+	public static final int rightClimberTalon = 10;
 
 	//Pneumatics
 	public static final int INTAKE_DEPLOY_DOWN = 0;

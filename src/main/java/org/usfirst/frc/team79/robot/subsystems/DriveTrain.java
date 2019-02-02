@@ -13,22 +13,22 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 //subsystem to control drive train
 public class DriveTrain extends Subsystem {
 	
-	public WPI_TalonSRX frontLeft, frontRight;
-	public WPI_VictorSPX backLeft, backRight;
+	public WPI_TalonSRX frontLeftMotor, frontRightMotor;
+	public WPI_VictorSPX backLeftMotor, backRightMotor;
 	public DifferentialDrive drive;	
 	public DriveTrain()
 	{
-		frontLeft = new WPI_TalonSRX (RobotMap.frontLeftTalon); //initialize talons
-		frontRight = new WPI_TalonSRX(RobotMap.frontRightTalon);
-		backLeft = new WPI_VictorSPX(RobotMap.backLeftVictor);
-		backRight = new WPI_VictorSPX(RobotMap.backRightVictor);
-		drive = new DifferentialDrive(frontLeft, frontRight);//Initializes drive train
+		frontLeftMotor = new WPI_TalonSRX (RobotMap.frontLeftTalon); //initialize talons
+		frontRightMotor = new WPI_TalonSRX(RobotMap.frontRightTalon);
+		backLeftMotor = new WPI_VictorSPX(RobotMap.backLeftVictor);
+		backRightMotor = new WPI_VictorSPX(RobotMap.backRightVictor);
+		drive = new DifferentialDrive(frontLeftMotor, frontRightMotor);//Initializes drive train
 		
-		backLeft.follow(frontLeft); //backLeft follows frontLeft
-		backRight.follow(frontRight); //backRight follows frontRight
+		backLeftMotor.follow(frontLeftMotor); //backLeft follows frontLeft
+		backRightMotor.follow(frontRightMotor); //backRight follows frontRight
 
-		frontRight.setInverted(true); //makes the right side of the drive train go forward 
-		backRight.setInverted(InvertType.FollowMaster); 
+		frontRightMotor.setInverted(true); //makes the right side of the drive train go forward 
+		backRightMotor.setInverted(InvertType.FollowMaster); 
 
 		drive.setRightSideInverted(false);
 	}
