@@ -27,17 +27,20 @@ void setup() {
 void loop() {
   displayText("TEAM 79 KRUNCH!", 0x1515FF, 0);
   line(0xE837FC);
-  displayText("FIRST POWER UP", 0xFECF10, 0x800000);
+  displayText("FIRST DEEP SPACE", 0xFECF10, 0x800000);
   crossLines(0xFECF07, 0xFF0000);
   displayText("GRACIOUS PROFESSIONALISM!", 0x1515FF, 0);
   checkerboard(0x42F4EB, 0xAD2FED);
   displayText("DEAN KAMEN ROCKS!", 0x00FF00, 0);
   rainbow();
   displayText("WOODIE FLOWERS IS OUR HERO!", 0xF918AE, 0);
+  rainbow();
+  displayText("WATER GAME 2020 CONFIRMED!", 0xFFFFFF, 0x0707CC);
   water();
-  displayText("WATER GAME 2019 CONFIRMED!", 0xFFFFFF, 0x0707CC);
+  displayText("HOW TO MAKE A GOOD ROBOT?", 0xFFFFFF, 0x0707CC);
+  rainbow();
+  displayText("YOU PLANET", 0xFFFFFF, 0x0707CC);
   powerOff();
-
   //For media night
 //  displayText("HI MOM!   HI DAD!", 0x00ff99, 0x5b004e);
 //  crossLines(0x00ff99, 0x5b004e);
