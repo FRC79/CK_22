@@ -7,8 +7,10 @@
 
 package org.usfirst.frc.team79.robot;
 
+import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 import org.usfirst.frc.team79.robot.commands.IntakeIn;
 import org.usfirst.frc.team79.robot.commands.IntakeOut;
+import org.usfirst.frc.team79.robot.subsystems.Elevator;
 
 // import org.usfirst.frc.team79.robot.commands.Brake;
 
@@ -29,7 +31,7 @@ public class OI {
 
 	public Button intakeIn = new JoystickButton(operator, 5);
 	public Button intakeOut = new JoystickButton(operator, 6);
-	
+		
 	public OI()
 	{
 		intakeIn.whileHeld(new IntakeIn());

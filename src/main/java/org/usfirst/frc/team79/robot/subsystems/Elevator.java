@@ -1,7 +1,8 @@
 package org.usfirst.frc.team79.robot.subsystems;
 
+import org.usfirst.frc.team79.robot.Robot;
 import org.usfirst.frc.team79.robot.RobotMap;
-import org.usfirst.frc.team79.robot.commands.ControlElevator;
+import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -17,20 +18,18 @@ public class Elevator extends Subsystem {
 	{
 		leftMotor = new TalonSRX(RobotMap.leftElevatorTalon);
 		rightMotor = new TalonSRX(RobotMap.leftElevatorTalon);
+		Robot.MagEncoder.reset();
 	}
 	
 	public void stopMotors()
 	{
 		leftMotor.set(ControlMode.PercentOutput, 0);
 		rightMotor.set(ControlMode.PercentOutput, 0);
-
 	}
-	
 	
 	@Override
 	protected void initDefaultCommand() {
-		this.setDefaultCommand(new ControlElevator());
-		
+		this.setDefaultCommand(new ElevatorStoppingPoints());		
 	}
 
 }

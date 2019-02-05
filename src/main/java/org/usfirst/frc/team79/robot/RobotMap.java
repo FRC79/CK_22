@@ -22,13 +22,10 @@ public class RobotMap {
 	public static final int frontRightDriveTalon = 2; 
 	public static final int backLeftDriveVictor= 3;
 	public static final int backRightDriveVictor = 4; 
-	//Elevator Talons
 	public static final int leftElevatorTalon = 5;
 	public static final int rightElevatorTalon = 6; //Not used right now
-	//Intake Talons
 	public static final int leftIntakeTalon = 7;
 	public static final int rightIntakeTalon = 8;
-	//Gripper Talons
 	public static final int gripper1Talon = 9;
 	public static final int gripper2Talon = 10;
 
@@ -40,4 +37,18 @@ public class RobotMap {
 	
 	public static final int GRIPPER_HUG = 4;
 	public static final int GRIPPER_UNHUG = 5;
+
+	//Digital Input
+	public static final int ENCODER_A_CHANNEL = 0;
+	public static final int ENCORDER_B_CHANNEL = 1;
+
+	//Elevator Encoder Value Constants
+	public static final int ROCKET_HATCH1_VALUE = 0;
+	public static final int ROCKET_HATCH2_VALUE = 0;
+	public static final int ROCKET_HATCH3_VALUE = 0;
+	public static final int ROCKET_CARGO1_VALUE = 0;
+	public static final int ROCKET_CARGO2_VALUE = 0;
+	public static final int ROCKET_CARGO3_VALUE = 0;
+
+
 }
