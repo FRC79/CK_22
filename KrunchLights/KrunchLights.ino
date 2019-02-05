@@ -25,9 +25,9 @@ void setup() {
 }
 
 void loop() {
-  displayText("TEAM 79 KRUNCH!", 0x1515FF, 0);
-  line(0xE837FC);
-  displayText("FIRST DEEP SPACE", 0xFECF10, 0x800000);
+  displayText("TEAM 79 KRUNCH!", 0x1515FF, 0); //Bright blue, Black 
+  line(0xE837FC); //Bright pink
+  displayText("FIRST DEEP SPACE", 0xFECF10, 0x800000); //Change colors
   crossLines(0xFECF07, 0xFF0000);
   displayText("GRACIOUS PROFESSIONALISM!", 0x1515FF, 0);
   checkerboard(0x42F4EB, 0xAD2FED);
@@ -37,9 +37,9 @@ void loop() {
   rainbow();
   displayText("WATER GAME 2020 CONFIRMED!", 0xFFFFFF, 0x0707CC);
   water();
-  displayText("HOW TO MAKE A GOOD ROBOT?", 0xFFFFFF, 0x0707CC);
+  displayText("HOW DO YOU MAKE A GOOD ROBOT?", 0x98FB98, 0x003366); //Light green background and dark blue text
   rainbow();
-  displayText("YOU PLANET", 0xFFFFFF, 0x0707CC);
+  displayText("YOU PLANET", 0x98FB98, 0x003366); //Change colors
   powerOff();
   //For media night
 //  displayText("HI MOM!   HI DAD!", 0x00ff99, 0x5b004e);
