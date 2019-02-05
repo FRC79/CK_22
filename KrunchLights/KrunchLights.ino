@@ -27,8 +27,8 @@ void setup() {
 void loop() {
   displayText("TEAM 79 KRUNCH!", 0x1515FF, 0);
   line(0xE837FC);
-  displayText("FIRST DEEP SPACE", 0x9fa0b7, 0x800000);
-  crossLines(0xFECF07, 0xFF0000);
+  displayText("FIRST DEEP SPACE", 0xed9e36, 0x9fa0b7);//gray background and orange text from rocket
+  rainbow();
   displayText("GRACIOUS PROFESSIONALISM!", 0x1515FF, 0);
   checkerboard(0x42F4EB, 0xAD2FED);
   displayText("DEAN KAMEN ROCKS!", 0x00FF00, 0);
