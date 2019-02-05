@@ -7,10 +7,10 @@
 
 package org.usfirst.frc.team79.robot;
 
+import org.usfirst.frc.team79.robot.commands.ControlElevator;
 import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 import org.usfirst.frc.team79.robot.commands.IntakeIn;
 import org.usfirst.frc.team79.robot.commands.IntakeOut;
-import org.usfirst.frc.team79.robot.subsystems.Elevator;
 
 // import org.usfirst.frc.team79.robot.commands.Brake;
 
@@ -31,13 +31,15 @@ public class OI {
 
 	public Button intakeIn = new JoystickButton(operator, 5);
 	public Button intakeOut = new JoystickButton(operator, 6);
-		
+	public Button elevatorToggle = new JoystickButton(operator, 10);
+
 	public OI()
 	{
 		intakeIn.whileHeld(new IntakeIn());
 		intakeOut.whileHeld(new IntakeOut());
+		
+		elevatorToggle.toggleWhenPressed(new ControlElevator());
 	}
-
 	
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a

@@ -49,6 +49,7 @@ public class RobotMap {
 	public static final int ROCKET_CARGO1_VALUE = 0;
 	public static final int ROCKET_CARGO2_VALUE = 0;
 	public static final int ROCKET_CARGO3_VALUE = 0;
+	public static final int ELEVATOR_MAX_HEIGHT = 0;
 
 
 }

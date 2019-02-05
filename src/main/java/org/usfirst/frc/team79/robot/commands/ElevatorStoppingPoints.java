@@ -22,7 +22,6 @@ public class ElevatorStoppingPoints extends Command {
   public int level;
   public ArrayList<Integer> heights;
   public ElevatorStoppingPoints() {
-    requires(Robot.elevator);
   }
 
   // Called just before this Command runs the first time
@@ -53,6 +52,10 @@ public class ElevatorStoppingPoints extends Command {
 
     while(Robot.MagEncoder.get() < (level-1)) {
       Robot.elevator.leftMotor.set(ControlMode.PercentOutput, 0.5);
+
+      if (Robot.MagEncoder.get() >= RobotMap.ELEVATOR_MAX_HEIGHT) {
+        Robot.elevator.stopMotors();
+      }
     }
     while(Robot.MagEncoder.get() > (level+1)) {
       Robot.elevator.leftMotor.set(ControlMode.PercentOutput, -0.5);
@@ -65,6 +68,8 @@ public class ElevatorStoppingPoints extends Command {
     if(targetCount < 0) {
       targetCount = 0;
     }
+
+    
   }
 
   // Make this return true when this Command no longer needs to run execute()

@@ -14,22 +14,19 @@ public class Elevator extends Subsystem {
 
 	public TalonSRX leftMotor;
 	public TalonSRX rightMotor;
-	public Elevator()
-	{
+	public Elevator() {
 		leftMotor = new TalonSRX(RobotMap.leftElevatorTalon);
 		rightMotor = new TalonSRX(RobotMap.leftElevatorTalon);
 		Robot.MagEncoder.reset();
 	}
 	
-	public void stopMotors()
-	{
+	public void stopMotors() {
 		leftMotor.set(ControlMode.PercentOutput, 0);
 		rightMotor.set(ControlMode.PercentOutput, 0);
 	}
 	
 	@Override
 	protected void initDefaultCommand() {
-		this.setDefaultCommand(new ElevatorStoppingPoints());		
+		this.setDefaultCommand(new ElevatorStoppingPoints());
 	}
-
 }

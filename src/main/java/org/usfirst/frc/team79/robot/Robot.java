@@ -7,7 +7,6 @@
 
 package org.usfirst.frc.team79.robot;
 
-import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 import org.usfirst.frc.team79.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team79.robot.subsystems.Elevator;
 import org.usfirst.frc.team79.robot.subsystems.Gripper;
