@@ -25,21 +25,21 @@ void setup() {
 }
 
 void loop() {
-  displayText("TEAM 79 KRUNCH!", 0x1515FF, 0);
-  line(0xE837FC);
-  displayText("FIRST DEEP SPACE", 0xed9e36, 0x9fa0b7);//gray background and orange text from rocket
+  displayText("TEAM 79 KRUNCH!", 0x1515FF, 0); //Bright blue and black
+  line(0xE837FC); //Bright pink
+  displayText("FIRST DEEP SPACE", 0xED9E36, 0x9FA0B7); //gray background and orange text from rocket
+  crossLines(0XF2BB72, 0x6F7080);  //Lighter orange and darker gray
+  displayText("GRACIOUS PROFESSIONALISM!", 0x66B266, 0); //Medium green and black
+  checkerboard(0x42F4EB, 0xAD2FED); //Light blue and purple
+  displayText("DEAN KAMEN ROCKS!", 0xFF0000, 0); //Bright red
   rainbow();
-  displayText("GRACIOUS PROFESSIONALISM!", 0x1515FF, 0);
-  checkerboard(0x42F4EB, 0xAD2FED);
-  displayText("DEAN KAMEN ROCKS!", 0x00FF00, 0);
-  rainbow();
-  displayText("WOODIE FLOWERS IS OUR HERO!", 0xF918AE, 0);
+  displayText("WOODIE FLOWERS IS OUR HERO!", 0xF918AE, 0); //Bright darker pink
   rainbow();
   displayText("WATER GAME 2020 CONFIRMED!", 0xFFFFFF, 0x0707CC);
   water();
   displayText("HOW DO YOU MAKE A GOOD ROBOT?", 0x98FB98, 0x003366); //Light green background and dark blue text
-  rainbow();
-  displayText("YOU PLANET", 0x98FB98, 0x003366); //Change colors
+  checkerboard(0x9DD49D, 0x7F7FFF); //Light green and lilac
+  displayText("YOU PLANET", 0x98FB98, 0x003366);
   powerOff();
   //For media night
 //  displayText("HI MOM!   HI DAD!", 0x00ff99, 0x5b004e);
