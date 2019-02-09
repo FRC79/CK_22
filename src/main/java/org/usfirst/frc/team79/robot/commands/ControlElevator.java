@@ -24,12 +24,13 @@ public class ControlElevator extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    Robot.elevator.leftMotor.configFactoryDefault();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = 0.8 * Math.copySign(Math.pow(Robot.oi.drive.getY(), 2), -Robot.oi.drive.getY());
+    double value = 0.8 * Math.copySign(Math.pow(Robot.oi.operator.getY(), 2), -Robot.oi.operator.getY());
 
     if(value < 0)
     {

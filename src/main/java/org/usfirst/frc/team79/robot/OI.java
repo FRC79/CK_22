@@ -8,7 +8,7 @@
 package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.commands.ControlElevator;
-import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
+// import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 import org.usfirst.frc.team79.robot.commands.IntakeIn;
 import org.usfirst.frc.team79.robot.commands.IntakeOut;
 
@@ -38,7 +38,7 @@ public class OI {
 		intakeIn.whileHeld(new IntakeIn());
 		intakeOut.whileHeld(new IntakeOut());
 		
-		elevatorToggle.toggleWhenPressed(new ControlElevator());
+		// elevatorToggle.toggleWhenPressed(new ControlElevator());
 	}
 	
 	//// CREATING BUTTONS

@@ -2,7 +2,7 @@ package org.usfirst.frc.team79.robot.subsystems;
 
 import org.usfirst.frc.team79.robot.Robot;
 import org.usfirst.frc.team79.robot.RobotMap;
-import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
+import org.usfirst.frc.team79.robot.commands.ControlElevator;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -13,20 +13,20 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Elevator extends Subsystem {
 
 	public TalonSRX leftMotor;
-	public TalonSRX rightMotor;
+	// public TalonSRX rightMotor;
 	public Elevator() {
-		leftMotor = new TalonSRX(RobotMap.leftElevatorTalon);
-		rightMotor = new TalonSRX(RobotMap.leftElevatorTalon);
-		Robot.MagEncoder.reset();
+		leftMotor = new TalonSRX(RobotMap.rightIntakeTalon);
+		// rightMotor = new TalonSRX(RobotMap.leftElevatorTalon);
+		// Robot.MagEncoder.reset();
 	}
 	
 	public void stopMotors() {
 		leftMotor.set(ControlMode.PercentOutput, 0);
-		rightMotor.set(ControlMode.PercentOutput, 0);
+		// rightMotor.set(ControlMode.PercentOutput, 0);
 	}
 	
 	@Override
 	protected void initDefaultCommand() {
-		this.setDefaultCommand(new ElevatorStoppingPoints());
+		this.setDefaultCommand(new ControlElevator());
 	}
 }
