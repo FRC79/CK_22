@@ -45,22 +45,22 @@ void loop() {
   powerOff();
 
   //For media night
- displayText("HI MOM!   HI DAD!", 0x00ff99, 0x5b004e);
- crossLines(0x00ff99, 0x5b004e);
- displayText("WELCOME TO THE 2018 MEDIA NIGHT!", 0xFFFFFF, 0);
- displayText("THANKS TO OUR SPONSORS:", 0xFFFFFF, 0);
- displayText("EAST LAKE HIGH SCHOOL", 0xFFFFFF, 0);
- displayText("HONEYWELL", 0xeb3527, 0);
- displayText("PINELLAS COUNTY STEM ACADEMY", 0x3b4f81, 0);
- displayText("DOOLITTLE INSTITUTE", 0x0950f7, 0);
- displayText("JMS MEDICAL SUPPLY", 0x00ABE4, 0);
- displayText("LOWE'S", 0x0015d8, 0);
- displayText("MAGIC BUS", 0xff960c, 0);
- displayText("ROTARY INTERNATIONAL", 0xf7ef09, 0);
- displayText("PINELLAS COUNTY SCHOOLS", 0x1cff41, 0);
- displayText("STATE OF FLORIDA", 0xff960c, 0);
-displayText("KETTERING", 0xFFD100, 0x033280);
-displayText("BRIAN BLISA MALONEY", 0x0E1A81, 0x32DADC);
+ displayText("HI MOM!   HI DAD!", 0x00ff99, 0x5b004e); //light green, dark magenta
+ crossLines(0x00ff99, 0x5b004e); //light green, dark magenta
+ displayText("WELCOME TO THE 2018 MEDIA NIGHT!", 0xFFFFFF, 0); //White
+ displayText("THANKS TO OUR SPONSORS:", 0xFFFFFF, 0); //White
+ displayText("EAST LAKE HIGH SCHOOL", 0xFFFFFF, 0);//White
+ displayText("HONEYWELL", 0xeb3527, 0);//Red
+ displayText("PINELLAS COUNTY STEM ACADEMY", 0x3b4f81, 0); //Cerulean
+ displayText("DOOLITTLE INSTITUTE", 0x0950f7, 0);//blue
+ displayText("JMS MEDICAL SUPPLY", 0x00ABE4, 0);//sky blue
+ displayText("LOWE'S", 0x0015d8, 0); //Royal blue
+ displayText("MAGIC BUS", 0xff960c, 0); //Pumpkin orange
+ displayText("ROTARY INTERNATIONAL", 0xf7ef09, 0); //Yellow
+ displayText("PINELLAS COUNTY SCHOOLS", 0x1cff41, 0); //Parakeet Green
+ displayText("STATE OF FLORIDA", 0xff960c, 0);//Carrot orange
+displayText("KETTERING", 0xFFD100, 0x033280);//dandelion yellow, navy blue
+displayText("BRIAN BLISA MALONEY", 0x0E1A81, 0x32DADC); //Navy blue, Turquoise
  water();
  rainbow();
  checkerboard(0xf91bd8, 0x16ff92);
