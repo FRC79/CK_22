@@ -30,13 +30,13 @@ public class ControlElevator extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = 0.8 * Math.copySign(Math.pow(Robot.oi.operator.getY(), 2), -Robot.oi.operator.getY());
+    double value = 0.8 * Robot.oi.operator.getY();
 
     if(value < 0)
     {
-      value = 0.1 * Robot.oi.operator.getY();
+      value = 0.3 * Robot.oi.operator.getY();
     }
-	  Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
+    Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
   }
 
   // Make this return true when this Command no longer needs to run execute()
