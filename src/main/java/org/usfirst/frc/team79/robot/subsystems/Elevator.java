@@ -19,7 +19,7 @@ public class Elevator extends Subsystem {
 		rightMotor = new TalonSRX(RobotMap.leftElevatorTalon);
 		Robot.MagEncoder.reset();
 	}
-	
+	//Method to set the speed of the motors to 0
 	public void stopMotors() {
 		leftMotor.set(ControlMode.PercentOutput, 0);
 		rightMotor.set(ControlMode.PercentOutput, 0);
@@ -27,6 +27,6 @@ public class Elevator extends Subsystem {
 	
 	@Override
 	protected void initDefaultCommand() {
-		this.setDefaultCommand(new ElevatorStoppingPoints());
+		this.setDefaultCommand(new ElevatorStoppingPoints()); //When no other commands are using the elevator subsystem this command will be used
 	}
 }

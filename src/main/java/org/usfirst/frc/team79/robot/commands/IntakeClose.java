@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Closes arms to grab ball
 public class IntakeClose extends Command {
   public IntakeClose() {
     // Use requires() here to declare subsystem dependencies

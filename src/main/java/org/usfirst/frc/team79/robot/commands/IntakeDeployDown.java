@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Moves intake arms into ready position
 public class IntakeDeployDown extends Command {
   public IntakeDeployDown() {
     // Use requires() here to declare subsystem dependencies

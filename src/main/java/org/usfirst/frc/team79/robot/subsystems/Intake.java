@@ -27,14 +27,17 @@ public class Intake extends Subsystem {
 		rightMotor.set(ControlMode.PercentOutput, 0);
 	}
 
+	//Forward channel of solenoid activated
 	public void solenoidExpand(DoubleSolenoid solenoid) {
 		solenoid.set(DoubleSolenoid.Value.kForward);
 	  }
 	
+		//Backward channel of solenoid activated
 	  public void solenoidRetract(DoubleSolenoid solenoid) {
 		solenoid.set(DoubleSolenoid.Value.kReverse);
 	  }
 	
+		//Neither channel is activiated
 	  public void solenoidOff(DoubleSolenoid solenoid) {
 		solenoid.set(DoubleSolenoid.Value.kOff);
 	  }

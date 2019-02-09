@@ -14,6 +14,7 @@ import org.usfirst.frc.team79.robot.Robot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
+//Runs intake motors
 public class IntakeIn extends Command {
   
   public float time;

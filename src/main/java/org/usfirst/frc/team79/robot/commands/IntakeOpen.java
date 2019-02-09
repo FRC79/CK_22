@@ -10,7 +10,7 @@ package org.usfirst.frc.team79.robot.commands;
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-
+// Releases air to open intake arms
 public class IntakeOpen extends Command {
   public IntakeOpen() {
     // Use requires() here to declare subsystem dependencies

@@ -15,7 +15,8 @@ package org.usfirst.frc.team79.robot;
  */
 public class RobotMap {
 	/*
-	*Sets ID numbers for the talons
+	*Sets ID numbers for the talons, victors, pneumatic, and digital output
+	* For the talons and victors remember to use the Phoenix Tuner software to physically set the ID numbers
 	*/
 	//Drive Talons and Victors
 	public static final int frontLeftDriveTalon = 1;

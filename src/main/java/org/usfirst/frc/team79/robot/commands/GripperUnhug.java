@@ -11,6 +11,9 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+/*
+  Allows the gripper to let go of the third level of the habitat
+*/
 public class GripperUnhug extends Command {
   public GripperUnhug() {
     // Use requires() here to declare subsystem dependencies

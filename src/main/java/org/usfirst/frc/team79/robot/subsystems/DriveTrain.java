@@ -13,9 +13,14 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 //subsystem to control drive train
 public class DriveTrain extends Subsystem {
 	
+	/*
+		Declares Talon, victor, and drive train objects
+		The talons and victors are used to control the speed output sent to the motor
+	*/
 	public WPI_TalonSRX frontLeftMotor, frontRightMotor;
 	public WPI_VictorSPX backLeftMotor, backRightMotor;
 	public DifferentialDrive drive;	
+
 	public DriveTrain()
 	{
 		frontLeftMotor = new WPI_TalonSRX (RobotMap.frontLeftDriveTalon); //initialize talons
@@ -27,7 +32,7 @@ public class DriveTrain extends Subsystem {
 		backLeftMotor.follow(frontLeftMotor); //backLeft follows frontLeft
 		backRightMotor.follow(frontRightMotor); //backRight follows frontRight
 
-		frontRightMotor.setInverted(true); //makes the right side of the drive train go forward 
+		frontRightMotor.setInverted(true); //makes the right side of the drive train go forward when the left side goes forward
 		backRightMotor.setInverted(InvertType.FollowMaster); 
 
 		drive.setRightSideInverted(false);

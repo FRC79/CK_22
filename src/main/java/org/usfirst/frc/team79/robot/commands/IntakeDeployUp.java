@@ -10,7 +10,7 @@ package org.usfirst.frc.team79.robot.commands;
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-
+//Moves intake arms up when not in use
 public class IntakeDeployUp extends Command {
   public IntakeDeployUp() {
     // Use requires() here to declare subsystem dependencies

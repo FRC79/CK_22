@@ -13,7 +13,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
-
+//Runs motors in opposite direction
 public class IntakeOut extends Command {
   
   public float time;

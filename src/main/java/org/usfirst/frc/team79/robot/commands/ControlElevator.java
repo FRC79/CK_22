@@ -29,7 +29,7 @@ public class ControlElevator extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = 0.8 * Math.copySign(Math.pow(Robot.oi.drive.getY(), 2), -Robot.oi.drive.getY());
+    double value = 0.5 * Math.copySign(Math.pow(Robot.oi.drive.getY(), 2), -Robot.oi.drive.getY());
 
     if(value < 0)
     {

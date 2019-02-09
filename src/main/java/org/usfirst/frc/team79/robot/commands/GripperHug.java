@@ -10,7 +10,9 @@ package org.usfirst.frc.team79.robot.commands;
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-
+/*
+  This command allows the gripper to grab onto the third platform of the habitat
+*/
 public class GripperHug extends Command {
   public GripperHug() {
     // Use requires() here to declare subsystem dependencies
@@ -25,7 +27,7 @@ public class GripperHug extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.gripper.solenoidExpand();
+    Robot.gripper.solenoidExpand(); //Releases air through the forward channel of the solenoid
   }
 
   // Make this return true when this Command no longer needs to run execute()

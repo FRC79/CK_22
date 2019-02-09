@@ -53,11 +53,11 @@ public class Robot extends TimedRobot {
 		gripper = new Gripper();
 
 		// camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
-		// camera.setResolution(160, 120);
+		// camera.setResolution(160, 120); //Sets resolution of camera
 		
 		// camera2 = CameraServer.getInstance().startAutomaticCapture(1);
 		// camera2.setResolution(160, 120);	
-		MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X);
+		MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X); //Initializing magnetic encoder object to control elevator lift
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		MagEncoder.reset();
+		MagEncoder.reset(); //Resets the encoder value to 0
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
-		SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
+		SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get()); //Sends the Encoder value to the Smart Dashboard
 	}
 
 	@Override

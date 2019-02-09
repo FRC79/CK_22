@@ -30,14 +30,17 @@ public class Gripper extends Subsystem {
 
   }
 
+  //Method to release the air through the forward channel of the solenoid
   public void solenoidExpand() {
     grip.set(DoubleSolenoid.Value.kForward);
   }
 
+  //Method to stop the release of air through the backward channel of the solenoid
   public void solenoidRetract() {
     grip.set(DoubleSolenoid.Value.kReverse);
   }
 
+  //Air does not go through either channel
   public void solenoidOff() {
     grip.set(DoubleSolenoid.Value.kOff);
   }

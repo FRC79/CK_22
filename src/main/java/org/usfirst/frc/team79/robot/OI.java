@@ -8,7 +8,6 @@
 package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.commands.ControlElevator;
-import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 import org.usfirst.frc.team79.robot.commands.IntakeIn;
 import org.usfirst.frc.team79.robot.commands.IntakeOut;
 
@@ -25,20 +24,26 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
+
+//This area is only used to intialize Joystick and button objects
 public class OI {
-	public Joystick drive = new Joystick(0); //Initializes joystick
-	public Joystick operator = new Joystick(1); 
+	/*
+		Use driver station to find button numbers that go in the parenthesis
+	*/
+	public Joystick drive = new Joystick(0); //Initializes drive joystick
+	public Joystick operator = new Joystick(1); //Intialzies manipulator joystick
 
-	public Button intakeIn = new JoystickButton(operator, 5);
-	public Button intakeOut = new JoystickButton(operator, 6);
-	public Button elevatorToggle = new JoystickButton(operator, 10);
+	public Button intakeIn = new JoystickButton(operator, 5); //Initialiizes button to run the intake in command
+	public Button intakeOut = new JoystickButton(operator, 6); //Initializes button to run the intake out command
+	public Button elevatorToggle = new JoystickButton(operator, 10); //Intializes button to switch between manual elevator control and button to stop at set points
 
+	//Have to call methods inside this constructor
 	public OI()
 	{
-		intakeIn.whileHeld(new IntakeIn());
-		intakeOut.whileHeld(new IntakeOut());
+		intakeIn.whileHeld(new IntakeIn()); //While this button is held it will run the intake in command
+		intakeOut.whileHeld(new IntakeOut()); //While this button is held it will run the intake out comamnd
 		
-		elevatorToggle.toggleWhenPressed(new ControlElevator());
+		elevatorToggle.toggleWhenPressed(new ControlElevator()); //This button is used toggle the manual control of the elevator between on and off. When it is off the default command of ElevatorStoppingPoints() will be used 
 	}
 	
 	//// CREATING BUTTONS
