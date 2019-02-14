@@ -25,24 +25,25 @@ void setup() {
 }
 
 void loop() {
-  displayText("TEAM 79 KRUNCH!", 0x1515FF, 0); //Bright blue and black
-  line(0xE837FC); //Bright pink
-  displayText("FIRST DEEP SPACE", 0xED9E36, 0x9FA0B7); //gray background and orange text from rocket
-  crossLines(0XF2BB72, 0x6F7080);  //Lighter orange and darker gray
-  displayText("GRACIOUS PROFESSIONALISM!", 0x66B266, 0); //Medium green and black
-  checkerboard(0x42F4EB, 0xAD2FED); //Light blue and purple
-  displayText("DEAN KAMEN ROCKS!", 0xFF0000, 0); //Bright red
-  rainbow();
-  displayText("WOODIE FLOWERS IS OUR HERO!", 0xF918AE, 0); //Bright darker pink
-  rainbow();
-  displayText("WATER GAME 2020 CONFIRMED!", 0xFFFFFF, 0x0707CC);
-  water();
-  displayText("HOW DO YOU MAKE A GOOD ROBOT?", 0x98FB98, 0x003366); //Light green background and dark blue text
-  checkerboard(0x9DD49D, 0x7F7FFF); //Light green and lilac
-  displayText("YOU PLANET", 0x98FB98, 0x003366);
-  crossLines(0x9DD49D, 0x7F7FFF);
-  displayText("COMET ME BRO!", 0x5D0E63, 0x33F3CD); //Turquoise background and Purple text 
-  powerOff();
+ displayText("TEAM 79 KRUNCH!", 0x1515FF, 0); //Bright blue 
+ line(0xE837FC); //Bright pink
+ displayText("FIRST DEEP SPACE", 0xED9E36, 0); //orange text
+ crossLines(0XF2BB72, 0x6F7080);  //Lighter orange and darker gray
+ displayText("GRACIOUS PROFESSIONALISM!", 0x66B266, 0); //Medium green
+ displayText("DEAN KAMEN ROCKS!", 0xFF0000, 0); //Bright red
+ rainbow();
+ displayText("WOODIE FLOWERS IS OUR HERO!", 0xF918AE, 0); //Bright darker pink
+ rainbow();
+ displayText("WATER GAME 2020 CONFIRMED!", 0xFFFFFF, 0x0707CC);
+ water();
+ displayText("HOW DO YOU MAKE A GOOD ROBOT?", 0x98FB98, 0); //Light green background 
+ checkerboard(0x9DD49D, 0x7F7FFF); //Light green and lilac
+ displayText("YOU PLANET", 0x98FB98, 0);
+ crossLines(0x9DD49D, 0x7F7FFF);
+ displayText("COMET ME BRO!", 0x5D0E63, 0); //Turquoise background 
+ checkerboard(0xff7b00, 0x0007db); //Orange and blue
+ displayText("I AM POWERED BY 1.21 GIGAWATTS!", 0xCCCC00, 0); //Yellow text
+ powerOff();
 
   //For media night
 //  displayText("HI MOM!   HI DAD!", 0x00ff99, 0x5b004e);
