@@ -7,7 +7,13 @@
 
 package org.usfirst.frc.team79.robot;
 
+import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployDown;
+import org.usfirst.frc.team79.robot.commands.gripper.GripperHug;
+import org.usfirst.frc.team79.robot.commands.gripper.GripperUnhug;
+import org.usfirst.frc.team79.robot.commands.gripper.RobotFlip;
+import org.usfirst.frc.team79.robot.commands.intake.IntakeClose;
 import org.usfirst.frc.team79.robot.commands.intake.IntakeIn;
+import org.usfirst.frc.team79.robot.commands.intake.IntakeOpen;
 import org.usfirst.frc.team79.robot.commands.intake.IntakeOut;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -23,14 +29,33 @@ public class OI {
 	public Joystick drive = new Joystick(0); //Initializes joystick
 	public Joystick operator = new Joystick(1); 
 
-	public Button intakeIn = new JoystickButton(operator, 5);
-	public Button intakeOut = new JoystickButton(operator, 6);
-	public Button elevatorToggle = new JoystickButton(operator, 10);
+	public Button intakeIn = new JoystickButton(operator, 8); //RT
+	public Button intakeOut = new JoystickButton(operator, 7); //LT
+	public Button intakeOpen = new JoystickButton(operator, 6); //RB
+	public Button intakeClose = new JoystickButton(operator, 5); //LB
+	
+	public Button elevatorUp = new JoystickButton(operator, 4); //Y
+	public Button elevatorDown = new JoystickButton(operator, 2); //A
+
+	public Button gripperUnhug = new JoystickButton(drive, 5); //LB
+	public Button gripperHug = new JoystickButton(drive, 6); //RB
+	public Button gripperDown = new JoystickButton(drive, 1); //X
+	public Button robotPullUp = new JoystickButton(drive, 3); //B
+
+	// public Button elevatorToggle = new JoystickButton(operator, 10);
 
 	public OI()
 	{
 		intakeIn.whileHeld(new IntakeIn());
 		intakeOut.whileHeld(new IntakeOut());
+		intakeOpen.whenPressed(new IntakeOpen());
+		intakeClose.whenPressed(new IntakeClose());
+
+		gripperUnhug.whenPressed(new GripperUnhug());
+		gripperHug.whenPressed(new GripperHug());
+		gripperDown.whenPressed(new GripperDeployDown());
+		robotPullUp.whileHeld(new RobotFlip());
+
 		
 		// elevatorToggle.toggleWhenPressed(new ControlElevator());
 	}

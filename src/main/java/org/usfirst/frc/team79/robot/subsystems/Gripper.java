@@ -7,6 +7,7 @@
 
 package org.usfirst.frc.team79.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import org.usfirst.frc.team79.robot.RobotMap;
@@ -42,6 +43,10 @@ public class Gripper extends Subsystem {
 
   public void solenoidOff() {
     grip.set(DoubleSolenoid.Value.kOff);
+  }
+
+  public void stopMotor() {
+    motor.set(ControlMode.PercentOutput, 0);
   }
 
 

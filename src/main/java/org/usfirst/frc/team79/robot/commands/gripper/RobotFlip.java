@@ -5,14 +5,16 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands.intake;
+package org.usfirst.frc.team79.robot.commands.gripper;
+
+import com.ctre.phoenix.motorcontrol.ControlMode;
 
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeOpen extends Command {
-  public IntakeOpen() {
+public class RobotFlip extends Command {
+  public RobotFlip() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -25,18 +27,19 @@ public class IntakeOpen extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.solenoidExpand();
+    Robot.gripper.motor.set(ControlMode.PercentOutput, 0.25);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return true;
+    return false;
   }
 
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    Robot.gripper.stopMotor();
   }
 
   // Called when another command which requires one or more of the same

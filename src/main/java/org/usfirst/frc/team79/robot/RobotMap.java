@@ -30,14 +30,14 @@ public class RobotMap {
 	public static final int leftIntakeTalon = 10;
 
 	//Pneumatics
-	public static final int INTAKE_DEPLOY_DOWN = 0;
-	public static final int INTAKE_DEPLOY_UP = 1;
-	public static final int INTAKE_OPEN = 2;
-	public static final int INTAKE_CLOSE =3;
-	
-	public static final int GRIPPER_HUG = 4;
-	public static final int GRIPPER_UNHUG = 5;
-	public static final int GRIPPER_DEPLOY_DOWN = 6;
+	// public static final int INTAKE_DEPLOY_DOWN = 0;
+	// public static final int INTAKE_DEPLOY_UP = 1;
+	public static final int INTAKE_OPEN = 0;
+	public static final int INTAKE_CLOSE = 1;
+
+	public static final int GRIPPER_HUG = 2;
+	public static final int GRIPPER_UNHUG = 3;
+	public static final int GRIPPER_DEPLOY_DOWN = 4;
 
 	//Digital Input
 	public static final int ENCODER_A_CHANNEL = 0;

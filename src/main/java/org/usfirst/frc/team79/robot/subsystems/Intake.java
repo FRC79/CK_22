@@ -11,13 +11,13 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Intake extends Subsystem {
 	
 	public TalonSRX leftMotor, rightMotor; //Declares talons that will control left and right intake
-	public DoubleSolenoid deploy;
+	// public DoubleSolenoid deploy;
 	public DoubleSolenoid grab;
 	
 	public Intake() {
 		leftMotor = new TalonSRX(RobotMap.leftIntakeTalon); //Instantiates left talon
 		rightMotor = new TalonSRX(RobotMap.rightIntakeTalon); //Instantiates right talon
-		deploy = new DoubleSolenoid(RobotMap.INTAKE_DEPLOY_DOWN, RobotMap.INTAKE_DEPLOY_UP);
+		// deploy = new DoubleSolenoid(RobotMap.INTAKE_DEPLOY_DOWN, RobotMap.INTAKE_DEPLOY_UP);
 		grab = new DoubleSolenoid(RobotMap.INTAKE_OPEN, RobotMap.INTAKE_CLOSE);
 		
 	}
@@ -27,16 +27,16 @@ public class Intake extends Subsystem {
 		rightMotor.set(ControlMode.PercentOutput, 0);
 	}
 
-	public void solenoidExpand(DoubleSolenoid solenoid) {
-		solenoid.set(DoubleSolenoid.Value.kForward);
+	public void solenoidExpand() {
+		grab.set(DoubleSolenoid.Value.kForward);
 	  }
 	
-	  public void solenoidRetract(DoubleSolenoid solenoid) {
-		solenoid.set(DoubleSolenoid.Value.kReverse);
+	  public void solenoidRetract() {
+		grab.set(DoubleSolenoid.Value.kReverse);
 	  }
 	
-	  public void solenoidOff(DoubleSolenoid solenoid) {
-		solenoid.set(DoubleSolenoid.Value.kOff);
+	  public void solenoidOff() {
+		grab.set(DoubleSolenoid.Value.kOff);
 	  }
 
 
