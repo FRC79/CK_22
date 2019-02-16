@@ -42,15 +42,9 @@ public class IntakeIn extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.leftMotor.set(ControlMode.PercentOutput, 1); 
-    Robot.intake.rightMotor.set(ControlMode.PercentOutput, 1);
+    Robot.intake.leftMotor.set(ControlMode.PercentOutput, 0.8); 
+    Robot.intake.rightMotor.set(ControlMode.PercentOutput, 0.8);
 
-  }
-
-  // Make this return true when this Command no longer needs to run execute()
-  @Override
-  protected boolean isFinished() {
-    return doTime && timer.hasPeriodPassed(time);
   }
 
   // Called once after isFinished returns true
@@ -58,6 +52,13 @@ public class IntakeIn extends Command {
   protected void end() {
       Robot.intake.stopMotors();
   }
+
+    @Override
+    // Make this return true when this Command no longer needs to run execute()
+  protected boolean isFinished() {
+    return doTime && timer.hasPeriodPassed(time);
+  }
+
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run

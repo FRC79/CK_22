@@ -33,11 +33,11 @@ public class ControlElevator extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = 0.8 * Robot.oi.operator.getY();
+    double value = Robot.oi.operator.getY();
 
     if(value < 0)
     {
-      value = 0.3 * Robot.oi.operator.getY();
+      value = 0.5 * Robot.oi.operator.getY();
     }
     Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
     Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
