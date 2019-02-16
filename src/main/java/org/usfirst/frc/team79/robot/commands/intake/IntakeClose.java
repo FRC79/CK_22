@@ -5,59 +5,38 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands;
-
-import com.ctre.phoenix.motorcontrol.ControlMode;
+package org.usfirst.frc.team79.robot.commands.intake;
 
 import org.usfirst.frc.team79.robot.Robot;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeOut extends Command {
-  
-  public float time;
-  public boolean doTime;
-  public Timer timer;
-  
-  public IntakeOut() {
-    time = -1;
-  }
-
-  public IntakeOut(float time)
-  {
-    this.time = time;
+public class IntakeClose extends Command {
+  public IntakeClose() {
+    // Use requires() here to declare subsystem dependencies
+    // eg. requires(chassis);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    
-    if(time >= 0) {
-			doTime = true;
-		}
-
-		timer = new Timer();
-		timer.start();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.leftMotor.set(ControlMode.PercentOutput, -1);
-    Robot.intake.rightMotor.set(ControlMode.PercentOutput, -1);
+    Robot.intake.solenoidRetract(Robot.intake.grab);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return doTime && timer.hasPeriodPassed(time);
+    return true;
   }
 
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.intake.stopMotors();
   }
 
   // Called when another command which requires one or more of the same

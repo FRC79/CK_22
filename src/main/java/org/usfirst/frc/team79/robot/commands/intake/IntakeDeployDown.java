@@ -5,14 +5,14 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands;
+package org.usfirst.frc.team79.robot.commands.intake;
 
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeDeployUp extends Command {
-  public IntakeDeployUp() {
+public class IntakeDeployDown extends Command {
+  public IntakeDeployDown() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -25,9 +25,8 @@ public class IntakeDeployUp extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.solenoidRetract(Robot.intake.deploy);
+    Robot.intake.solenoidExpand(Robot.intake.deploy);
   }
-
 
   // Make this return true when this Command no longer needs to run execute()
   @Override

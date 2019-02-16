@@ -5,14 +5,14 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands;
+package org.usfirst.frc.team79.robot.commands.gripper;
 
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class GripperUnhug extends Command {
-  public GripperUnhug() {
+public class GripperHug extends Command {
+  public GripperHug() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -25,7 +25,7 @@ public class GripperUnhug extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.gripper.solenoidRetract();
+    Robot.gripper.solenoidExpand();
   }
 
   // Make this return true when this Command no longer needs to run execute()

@@ -5,55 +5,39 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands;
-
-import com.ctre.phoenix.motorcontrol.ControlMode;
+package org.usfirst.frc.team79.robot.commands.intake;
 
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-
-public class ControlElevator extends Command {
-  public ControlElevator() {
+public class IntakeDeployUp extends Command {
+  public IntakeDeployUp() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.elevator);
-
+    // eg. requires(chassis);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    Robot.elevator.leftMotor.configFactoryDefault();
-    Robot.elevator.rightMotor.configFactoryDefault();
-
-
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = 0.8 * Robot.oi.operator.getY();
-
-    if(value < 0)
-    {
-      value = 0.3 * Robot.oi.operator.getY();
-    }
-    Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
-    Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
-
+    Robot.intake.solenoidRetract(Robot.intake.deploy);
   }
+
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return false;
+    return true;
   }
 
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.elevator.stopMotors();
   }
 
   // Called when another command which requires one or more of the same

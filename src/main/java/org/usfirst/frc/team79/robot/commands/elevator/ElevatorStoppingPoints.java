@@ -5,7 +5,7 @@
 // /* the project.                                                               */
 // /*----------------------------------------------------------------------------*/
 
-// package org.usfirst.frc.team79.robot.commands;
+// package org.usfirst.frc.team79.robot.commands.elevator;
 
 // import java.util.ArrayList;
 

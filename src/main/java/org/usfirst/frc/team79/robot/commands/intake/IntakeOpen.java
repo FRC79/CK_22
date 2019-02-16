@@ -5,14 +5,14 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands;
+package org.usfirst.frc.team79.robot.commands.intake;
 
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeClose extends Command {
-  public IntakeClose() {
+public class IntakeOpen extends Command {
+  public IntakeOpen() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -25,7 +25,7 @@ public class IntakeClose extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.solenoidRetract(Robot.intake.grab);
+    Robot.intake.solenoidExpand(Robot.intake.grab);
   }
 
   // Make this return true when this Command no longer needs to run execute()

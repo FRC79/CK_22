@@ -5,58 +5,55 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team79.robot.commands;
+package org.usfirst.frc.team79.robot.commands.elevator;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
 import org.usfirst.frc.team79.robot.Robot;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class IntakeIn extends Command {
-  
-  public float time;
-  private boolean doTime;
-  private Timer timer;
 
-  public IntakeIn() {
-      time = -1;
-  }
+public class ControlElevator extends Command {
+  public ControlElevator() {
+    // Use requires() here to declare subsystem dependencies
+    requires(Robot.elevator);
 
-  public IntakeIn(float time) {
-      this.time = time;
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    if(time >= 0) {
-			doTime = true;
-    }
-    
-		timer = new Timer();
-		timer.start();
+    Robot.elevator.leftMotor.configFactoryDefault();
+    Robot.elevator.rightMotor.configFactoryDefault();
+
+
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.leftMotor.set(ControlMode.PercentOutput, 1); 
-    Robot.intake.rightMotor.set(ControlMode.PercentOutput, 1);
+    double value = 0.8 * Robot.oi.operator.getY();
+
+    if(value < 0)
+    {
+      value = 0.3 * Robot.oi.operator.getY();
+    }
+    Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
+    Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
 
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return doTime && timer.hasPeriodPassed(time);
+    return false;
   }
 
   // Called once after isFinished returns true
   @Override
   protected void end() {
-      Robot.intake.stopMotors();
+    Robot.elevator.stopMotors();
   }
 
   // Called when another command which requires one or more of the same
