@@ -15,8 +15,8 @@ public class Elevator extends Subsystem {
 	public TalonSRX leftMotor;
 	public TalonSRX rightMotor;
 	public Elevator() {
-		leftMotor = new TalonSRX(RobotMap.leftElevatorTalon);
-		rightMotor = new TalonSRX(RobotMap.rightElevatorTalon);
+		leftMotor = new TalonSRX(RobotMap.elevator1Talon);
+		rightMotor = new TalonSRX(RobotMap.elevator2Talon);
 		Robot.MagEncoder.reset();
 	}
 	

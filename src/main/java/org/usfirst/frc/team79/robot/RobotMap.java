@@ -22,12 +22,12 @@ public class RobotMap {
 	public static final int frontRightDriveTalon = 2; 
 	public static final int backLeftDriveVictor= 3;
 	public static final int backRightDriveVictor = 4; 
-	public static final int leftElevatorTalon = 5;
-	public static final int rightElevatorTalon = 6; 
-	public static final int leftIntakeTalon = 7;
-	public static final int rightIntakeTalon = 8; 
-	public static final int gripper1Talon = 9;
-	public static final int gripper2Talon = 10;
+	public static final int gripper1Talon = 5;
+	// public static final int gripper2Talon = 6;
+	public static final int elevator1Talon = 7;
+	public static final int elevator2Talon = 8; 
+	public static final int rightIntakeTalon = 9; 
+	public static final int leftIntakeTalon = 10;
 
 	//Pneumatics
 	public static final int INTAKE_DEPLOY_DOWN = 0;

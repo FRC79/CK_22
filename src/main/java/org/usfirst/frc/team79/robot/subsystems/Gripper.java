@@ -26,7 +26,7 @@ public class Gripper extends Subsystem {
   public Gripper() {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);
     motor1 = new TalonSRX(RobotMap.gripper1Talon);
-    motor2 = new TalonSRX(RobotMap.gripper2Talon);
+    //motor2 = new TalonSRX(RobotMap.gripper2Talon);
 
   }
 
