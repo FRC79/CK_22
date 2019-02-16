@@ -12,6 +12,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import org.usfirst.frc.team79.robot.RobotMap;
 
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -30,7 +31,8 @@ public class Gripper extends Subsystem {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);
     deployDown = new Solenoid(RobotMap.GRIPPER_DEPLOY_DOWN);
     motor = new TalonSRX(RobotMap.gripper1Talon);
-
+ 
+    
   }
 
   public void solenoidExpand() {
