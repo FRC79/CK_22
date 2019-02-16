@@ -52,7 +52,8 @@ public class Robot extends TimedRobot {
 		gripper = new Gripper();
 
 		camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
-		camera.setResolution(240, 160);
+		camera.setResolution(285, 180);
+		camera.setFPS(30);
 	
 		MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X);
 	}
@@ -94,7 +95,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
-		SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
+		// SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
 	}
 
 	@Override
@@ -108,7 +109,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
+		// SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
 	}
 	/**
 	 * This function is called periodically during test mode.

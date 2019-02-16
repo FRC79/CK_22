@@ -37,6 +37,7 @@ public class RobotMap {
 	
 	public static final int GRIPPER_HUG = 4;
 	public static final int GRIPPER_UNHUG = 5;
+	public static final int GRIPPER_DEPLOY_DOWN = 6;
 
 	//Digital Input
 	public static final int ENCODER_A_CHANNEL = 0;

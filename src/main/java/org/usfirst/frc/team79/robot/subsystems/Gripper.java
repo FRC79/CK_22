@@ -12,6 +12,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import org.usfirst.frc.team79.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -19,14 +20,15 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Gripper extends Subsystem {
   public DoubleSolenoid grip;
-  public TalonSRX motor1, motor2;
+  public Solenoid deployDown;
+  public TalonSRX motor;
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   public Gripper() {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);
-    motor1 = new TalonSRX(RobotMap.gripper1Talon);
-    //motor2 = new TalonSRX(RobotMap.gripper2Talon);
+    deployDown = new Solenoid(RobotMap.GRIPPER_DEPLOY_DOWN);
+    motor = new TalonSRX(RobotMap.gripper1Talon);
 
   }
 
@@ -41,6 +43,7 @@ public class Gripper extends Subsystem {
   public void solenoidOff() {
     grip.set(DoubleSolenoid.Value.kOff);
   }
+
 
   @Override
   public void initDefaultCommand() {
