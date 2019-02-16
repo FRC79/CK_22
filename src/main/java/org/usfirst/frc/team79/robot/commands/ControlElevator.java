@@ -25,6 +25,9 @@ public class ControlElevator extends Command {
   @Override
   protected void initialize() {
     Robot.elevator.leftMotor.configFactoryDefault();
+    Robot.elevator.rightMotor.configFactoryDefault();
+
+
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -37,6 +40,8 @@ public class ControlElevator extends Command {
       value = 0.3 * Robot.oi.operator.getY();
     }
     Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
+    Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
+
   }
 
   // Make this return true when this Command no longer needs to run execute()

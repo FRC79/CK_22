@@ -13,16 +13,16 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Elevator extends Subsystem {
 
 	public TalonSRX leftMotor;
-	// public TalonSRX rightMotor;
+	public TalonSRX rightMotor;
 	public Elevator() {
-		leftMotor = new TalonSRX(RobotMap.rightIntakeTalon);
-		// rightMotor = new TalonSRX(RobotMap.leftElevatorTalon);
-		// Robot.MagEncoder.reset();
+		leftMotor = new TalonSRX(RobotMap.leftElevatorTalon);
+		rightMotor = new TalonSRX(RobotMap.rightElevatorTalon);
+		Robot.MagEncoder.reset();
 	}
 	
 	public void stopMotors() {
 		leftMotor.set(ControlMode.PercentOutput, 0);
-		// rightMotor.set(ControlMode.PercentOutput, 0);
+		rightMotor.set(ControlMode.PercentOutput, 0);
 	}
 	
 	@Override

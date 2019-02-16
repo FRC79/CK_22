@@ -13,8 +13,8 @@ import org.usfirst.frc.team79.robot.subsystems.Gripper;
 import org.usfirst.frc.team79.robot.subsystems.Intake;
 
 import edu.wpi.first.wpilibj.Encoder;
-// import edu.wpi.cscore.UsbCamera;
-// import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -32,8 +32,7 @@ public class Robot extends TimedRobot {
 	public static Elevator elevator;
 	public static Intake intake;
 	public static Gripper gripper;
-	// public static UsbCamera camera;
-	// public static UsbCamera camera2;
+	public static UsbCamera camera;
 	public static Encoder MagEncoder; 
 
 
@@ -52,11 +51,9 @@ public class Robot extends TimedRobot {
 		intake = new Intake();
 		gripper = new Gripper();
 
-		// camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
-		// camera.setResolution(160, 120);
-		
-		// camera2 = CameraServer.getInstance().startAutomaticCapture(1);
-		// camera2.setResolution(160, 120);	
+		camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
+		camera.setResolution(240, 160);
+	
 		MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X);
 	}
 

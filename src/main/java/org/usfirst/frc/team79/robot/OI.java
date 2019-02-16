@@ -7,15 +7,10 @@
 
 package org.usfirst.frc.team79.robot;
 
-import org.usfirst.frc.team79.robot.commands.ControlElevator;
+// import org.usfirst.frc.team79.robot.commands.ControlElevator;
 // import org.usfirst.frc.team79.robot.commands.ElevatorStoppingPoints;
 import org.usfirst.frc.team79.robot.commands.IntakeIn;
 import org.usfirst.frc.team79.robot.commands.IntakeOut;
-
-// import org.usfirst.frc.team79.robot.commands.Brake;
-
-// import org.usfirst.frc.team79.robot.commands.CameraFeed;
-
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
