@@ -32,8 +32,8 @@ public class RobotMap {
 	//Pneumatics
 	// public static final int INTAKE_DEPLOY_DOWN = 0;
 	// public static final int INTAKE_DEPLOY_UP = 1;
-	public static final int INTAKE_OPEN = 0;
-	public static final int INTAKE_CLOSE = 1;
+	public static final int INTAKE_OPEN = 6;
+	public static final int INTAKE_CLOSE = 7;
 
 	public static final int GRIPPER_HUG = 2;
 	public static final int GRIPPER_UNHUG = 3;
