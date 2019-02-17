@@ -2,27 +2,27 @@ package org.usfirst.frc.team79.robot.subsystems;
 
 import org.usfirst.frc.team79.robot.RobotMap;
 import org.usfirst.frc.team79.robot.commands.ArcadeDrive;
+import org.usfirst.frc.team79.robot.utilities.ArcadeUtil;
 
 import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 //subsystem to control drive train
 public class DriveTrain extends Subsystem {
 	
 	public WPI_TalonSRX frontLeftMotor, frontRightMotor;
 	public WPI_VictorSPX backLeftMotor, backRightMotor;
-	public DifferentialDrive drive;	
+	public ArcadeUtil drive;	
 	public DriveTrain()
 	{
 		frontLeftMotor = new WPI_TalonSRX (RobotMap.frontLeftDriveTalon); //initialize talons
 		frontRightMotor = new WPI_TalonSRX(RobotMap.frontRightDriveTalon);
 		backLeftMotor = new WPI_VictorSPX(RobotMap.backLeftDriveVictor);
 		backRightMotor = new WPI_VictorSPX(RobotMap.backRightDriveVictor);
-		drive = new DifferentialDrive(frontLeftMotor, frontRightMotor);//Initializes drive train
+		drive = new ArcadeUtil(frontLeftMotor, frontRightMotor);//Initializes drive train
 		
 		backLeftMotor.follow(frontLeftMotor); //backLeft follows frontLeft
 		backRightMotor.follow(frontRightMotor); //backRight follows frontRight
