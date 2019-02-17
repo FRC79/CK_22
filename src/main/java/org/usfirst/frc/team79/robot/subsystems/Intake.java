@@ -21,7 +21,7 @@ public class Intake extends Subsystem {
 		grab = new DoubleSolenoid(RobotMap.INTAKE_OPEN, RobotMap.INTAKE_CLOSE);
 		
 	}
-
+	
 	public void stopMotors() { 
 		leftMotor.set(ControlMode.PercentOutput, 0); //sets motor speed to 0
 		rightMotor.set(ControlMode.PercentOutput, 0);
@@ -38,8 +38,6 @@ public class Intake extends Subsystem {
 	  public void solenoidOff() {
 		grab.set(DoubleSolenoid.Value.kOff);
 	  }
-
-
 
 	@Override
 	protected void initDefaultCommand() {

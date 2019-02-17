@@ -29,11 +29,10 @@ public class OI {
 	public Joystick drive = new Joystick(0); //Initializes joystick
 	public Joystick operator = new Joystick(1); 
 
-	public Button intakeIn = new JoystickButton(operator, 8); //RT
 	public Button intakeOut = new JoystickButton(operator, 7); //LT
-	public Button intakeOpen = new JoystickButton(operator, 6); //RB
+	public Button intakeIn = new JoystickButton(operator, 8); //RT
 	public Button intakeClose = new JoystickButton(operator, 5); //LB
-	
+	public Button intakeOpen = new JoystickButton(operator, 6); //RB
 	public Button elevatorUp = new JoystickButton(operator, 4); //Y
 	public Button elevatorDown = new JoystickButton(operator, 2); //A
 
@@ -44,8 +43,7 @@ public class OI {
 
 	// public Button elevatorToggle = new JoystickButton(operator, 10);
 
-	public OI()
-	{
+	public OI() {
 		intakeIn.whileHeld(new IntakeIn());
 		intakeOut.whileHeld(new IntakeOut());
 		intakeOpen.whenPressed(new IntakeOpen());
@@ -55,8 +53,6 @@ public class OI {
 		gripperHug.whenPressed(new GripperHug());
 		gripperDown.whenPressed(new GripperDeployDown());
 		robotPullUp.whileHeld(new RobotFlip());
-
-		
 		// elevatorToggle.toggleWhenPressed(new ControlElevator());
 	}
 	

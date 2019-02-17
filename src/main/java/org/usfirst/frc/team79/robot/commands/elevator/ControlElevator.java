@@ -18,7 +18,6 @@ public class ControlElevator extends Command {
   public ControlElevator() {
     // Use requires() here to declare subsystem dependencies
     requires(Robot.elevator);
-
   }
 
   // Called just before this Command runs the first time
@@ -26,8 +25,6 @@ public class ControlElevator extends Command {
   protected void initialize() {
     Robot.elevator.leftMotor.configFactoryDefault();
     Robot.elevator.rightMotor.configFactoryDefault();
-
-
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -35,13 +32,11 @@ public class ControlElevator extends Command {
   protected void execute() {
     double value = Robot.oi.operator.getY();
 
-    if(value < 0)
-    {
+    if(value < 0) {
       value = 0.5 * Robot.oi.operator.getY();
     }
     Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
     Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
-
   }
 
   // Make this return true when this Command no longer needs to run execute()

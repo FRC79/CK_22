@@ -29,9 +29,7 @@ public class Gripper extends Subsystem {
   public Gripper() {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);
     deployDown = new Solenoid(RobotMap.GRIPPER_DEPLOY_DOWN);
-    motor = new TalonSRX(RobotMap.gripper1Talon);
- 
-    
+    motor = new TalonSRX(RobotMap.gripper1Talon);  
   }
 
   public void solenoidExpand() {
@@ -49,7 +47,6 @@ public class Gripper extends Subsystem {
   public void stopMotor() {
     motor.set(ControlMode.PercentOutput, 0);
   }
-
 
   @Override
   public void initDefaultCommand() {
