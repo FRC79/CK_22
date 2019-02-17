@@ -27,6 +27,8 @@
 //   // Called just before this Command runs the first time
 //   @Override
 //   protected void initialize() {
+//     Robot.elevator.leftMotor.configFactoryDefault();
+//     Robot.elevator.rightMotor.configFactoryDefault();
 //     Robot.MagEncoder.reset();
 //     targetCount = -1;
 //     heights = new ArrayList<>(6);
@@ -82,4 +84,4 @@
 //   @Override
 //   protected void end() {
 //   }
-//}
+// }
