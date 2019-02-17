@@ -53,7 +53,7 @@ public class Robot extends TimedRobot {
 		intake = new Intake();
 		gripper = new Gripper();
 		pump = new Compressor(0);
-		pump.setClosedLoopControl(true);
+		pump.setClosedLoopControl(true); //might have to move to Teleopinit
 
 		camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
 		camera.setResolution(285, 180);
