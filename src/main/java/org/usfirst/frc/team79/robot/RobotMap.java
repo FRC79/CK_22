@@ -14,9 +14,7 @@ package org.usfirst.frc.team79.robot;
  * floating around.
  */
 public class RobotMap {
-	/*
-	*Sets ID numbers for the talons
-	*/
+	/* Sets ID numbers for the talons */
 	//Drive Talons and Victors
 	public static final int frontLeftDriveTalon = 1;
 	public static final int frontRightDriveTalon = 2; 
@@ -48,6 +46,4 @@ public class RobotMap {
 	public static final int ROCKET_CARGO2_VALUE = 0;
 	public static final int ROCKET_CARGO3_VALUE = 0;
 	public static final int ELEVATOR_MAX_HEIGHT = 0;
-
-
 }
