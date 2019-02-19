@@ -21,27 +21,27 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Gripper extends Subsystem {
   public DoubleSolenoid grip;
-  public Solenoid deployDown;
+  public DoubleSolenoid deploy;
   public TalonSRX motor;
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   public Gripper() {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);
-    deployDown = new Solenoid(RobotMap.GRIPPER_DEPLOY_DOWN);
+    deploy = new DoubleSolenoid(RobotMap.GRIPPER_DEPLOY_DOWN, RobotMap.GRIPPER_DEPLOY_UP);
     motor = new TalonSRX(RobotMap.gripper1Talon);  
   }
 
-  public void solenoidExpand() {
-    grip.set(DoubleSolenoid.Value.kForward);
+  public void solenoidExpand(DoubleSolenoid solenoid) {
+    solenoid.set(DoubleSolenoid.Value.kForward);
   }
 
-  public void solenoidRetract() {
-    grip.set(DoubleSolenoid.Value.kReverse);
+  public void solenoidRetract(DoubleSolenoid solenoid) {
+    solenoid.set(DoubleSolenoid.Value.kReverse);
   }
 
-  public void solenoidOff() {
-    grip.set(DoubleSolenoid.Value.kOff);
+  public void solenoidOff(DoubleSolenoid solenoid) {
+    solenoid.set(DoubleSolenoid.Value.kOff);
   }
 
   public void stopMotor() {

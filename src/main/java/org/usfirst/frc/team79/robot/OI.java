@@ -8,9 +8,11 @@
 package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployDown;
+import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployUp;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperHug;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperUnhug;
 import org.usfirst.frc.team79.robot.commands.gripper.RobotFlip;
+import org.usfirst.frc.team79.robot.commands.gripper.RobotUnflip;
 import org.usfirst.frc.team79.robot.commands.intake.IntakeClose;
 import org.usfirst.frc.team79.robot.commands.intake.IntakeIn;
 import org.usfirst.frc.team79.robot.commands.intake.IntakeOpen;
@@ -39,7 +41,10 @@ public class OI {
 	public Button gripperUnhug = new JoystickButton(drive, 5); //LB
 	public Button gripperHug = new JoystickButton(drive, 6); //RB
 	public Button gripperDown = new JoystickButton(drive, 1); //X
-	public Button robotPullUp = new JoystickButton(drive, 3); //B
+	public Button gripperUp = new JoystickButton(drive, 3); // B
+	public Button robotFlip = new JoystickButton(drive, 4); //Y
+	public Button robotUnflip = new JoystickButton(drive, 2); //A
+
 
 	// public Button elevatorToggle = new JoystickButton(operator, 10);
 
@@ -52,7 +57,9 @@ public class OI {
 		gripperUnhug.whenPressed(new GripperUnhug());
 		gripperHug.whenPressed(new GripperHug());
 		gripperDown.whenPressed(new GripperDeployDown());
-		robotPullUp.whileHeld(new RobotFlip());
+		gripperUp.whenPressed(new GripperDeployUp());
+		robotFlip.whileHeld(new RobotFlip());
+		robotUnflip.whileHeld(new RobotUnflip());
 		// elevatorToggle.toggleWhenPressed(new ControlElevator());
 	}
 	

@@ -7,12 +7,14 @@
 
 package org.usfirst.frc.team79.robot.commands.gripper;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+
 import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class GripperDeployDown extends Command {
-  public GripperDeployDown() {
+public class RobotUnflip extends Command {
+  public RobotUnflip() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -20,12 +22,13 @@ public class GripperDeployDown extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    Robot.gripper.motor.configFactoryDefault();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.gripper.solenoidExpand(Robot.gripper.deploy);
+    Robot.gripper.motor.set(ControlMode.PercentOutput, -0.25);
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -38,4 +41,5 @@ public class GripperDeployDown extends Command {
   @Override
   protected void end() {
   }
+
 }

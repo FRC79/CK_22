@@ -11,8 +11,8 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class GripperDeployDown extends Command {
-  public GripperDeployDown() {
+public class GripperDeployUp extends Command {
+  public GripperDeployUp() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -25,7 +25,7 @@ public class GripperDeployDown extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.gripper.solenoidExpand(Robot.gripper.deploy);
+    Robot.gripper.solenoidRetract(Robot.gripper.deploy);
   }
 
   // Make this return true when this Command no longer needs to run execute()
