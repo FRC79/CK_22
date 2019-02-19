@@ -32,7 +32,7 @@ public class ControlElevator extends Command {
   protected void execute() {
     double value = Robot.oi.operator.getY();
 
-    if(value < 0) {
+    if(value > 0) {
       value = 0.5 * Robot.oi.operator.getY();
     }
     Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
