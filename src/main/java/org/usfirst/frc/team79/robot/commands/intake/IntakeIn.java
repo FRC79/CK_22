@@ -17,13 +17,15 @@ public class IntakeIn extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    Robot.intake.leftMotor.configFactoryDefault();
+    Robot.intake.rightMotor.configFactoryDefault();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.intake.leftMotor.set(ControlMode.PercentOutput, 0.8); 
-    Robot.intake.rightMotor.set(ControlMode.PercentOutput, 0.8);
+    Robot.intake.leftMotor.set(ControlMode.PercentOutput, 0.5); 
+    Robot.intake.rightMotor.set(ControlMode.PercentOutput, 0.5);
 
   }
 
