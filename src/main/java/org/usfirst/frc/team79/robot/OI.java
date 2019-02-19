@@ -35,15 +35,17 @@ public class OI {
 	public Button intakeIn = new JoystickButton(operator, 8); //RT
 	public Button intakeClose = new JoystickButton(operator, 5); //LB
 	public Button intakeOpen = new JoystickButton(operator, 6); //RB
-	public Button elevatorUp = new JoystickButton(operator, 4); //Y
-	public Button elevatorDown = new JoystickButton(operator, 2); //A
+	// public Button elevatorUp = new JoystickButton(operator, 4); //Y
+	// public Button elevatorDown = new JoystickButton(operator, 2); //A
+	public Button robotFlip = new JoystickButton(operator, 3); //B
+	public Button robotUnflip = new JoystickButton(operator, 1); //X
+	public Button gripperDown = new JoystickButton(operator, 4); //Y
+	public Button gripperUp = new JoystickButton(operator, 2); // A
 
 	public Button gripperUnhug = new JoystickButton(drive, 5); //LB
 	public Button gripperHug = new JoystickButton(drive, 6); //RB
-	public Button gripperDown = new JoystickButton(drive, 1); //X
-	public Button gripperUp = new JoystickButton(drive, 3); // B
-	public Button robotFlip = new JoystickButton(drive, 4); //Y
-	public Button robotUnflip = new JoystickButton(drive, 2); //A
+
+	
 
 
 	// public Button elevatorToggle = new JoystickButton(operator, 10);
