@@ -13,12 +13,8 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import org.usfirst.frc.team79.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-/**
- * Add your docs here.
- */
 public class Gripper extends Subsystem {
   public DoubleSolenoid grip;
   public DoubleSolenoid deploy;
