@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Closes intake arms so that the arms will fit inside inner hole of hatch
 public class IntakeClose extends Command {
   public IntakeClose() {
     // Use requires() here to declare subsystem dependencies

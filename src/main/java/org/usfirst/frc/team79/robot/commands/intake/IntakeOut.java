@@ -13,6 +13,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Shoots out the cargo 
 public class IntakeOut extends Command {
 
 

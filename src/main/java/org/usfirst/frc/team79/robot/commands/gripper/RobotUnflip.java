@@ -13,6 +13,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Used to winch the robot back down from the 3rd HAB platform
 public class RobotUnflip extends Command {
   public RobotUnflip() {
     // Use requires() here to declare subsystem dependencies

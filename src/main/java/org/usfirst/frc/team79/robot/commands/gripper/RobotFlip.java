@@ -13,6 +13,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Once hugger has latched on to 3rd HAB platform, this command is run to winch up the robot and flip it onto the platform
 public class RobotFlip extends Command {
   public RobotFlip() {
     // Use requires() here to declare subsystem dependencies

@@ -16,8 +16,7 @@ public class DriveTrain extends Subsystem {
 	public WPI_TalonSRX frontLeftMotor, frontRightMotor;
 	public WPI_VictorSPX backLeftMotor, backRightMotor;
 	public ArcadeUtil drive;	
-	public DriveTrain()
-	{
+	public DriveTrain() {
 		frontLeftMotor = new WPI_TalonSRX (RobotMap.frontLeftDriveTalon); //initialize talons
 		frontRightMotor = new WPI_TalonSRX(RobotMap.frontRightDriveTalon);
 		backLeftMotor = new WPI_VictorSPX(RobotMap.backLeftDriveVictor);
@@ -32,10 +31,10 @@ public class DriveTrain extends Subsystem {
 
 		drive.setRightSideInverted(false);
 	}
+
 	@Override
 	protected void initDefaultCommand() {
 		this.setDefaultCommand(new ArcadeDrive()); //VERY IMPORTANT!!! Sets the arcade drive command as default for the subsystem
-	
 	}
 
 }

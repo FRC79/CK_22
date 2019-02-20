@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Punches down gripper to prepare for grasping of third HAB platform
 public class GripperDeployDown extends Command {
   public GripperDeployDown() {
     // Use requires() here to declare subsystem dependencies

@@ -35,8 +35,9 @@ public class RobotMap {
 	public static final int INTAKE_CLOSE = 4;
 	public static final int INTAKE_OPEN = 5;
 
+	/*
 	//Digital Input
-	public static final int ENCODER_A_CHANNEL = 0;
+	public static final int ENCODER_A_CHANNEL = 0; 
 	public static final int ENCORDER_B_CHANNEL = 1;
 
 	//Elevator Encoder Value Constants
@@ -47,4 +48,5 @@ public class RobotMap {
 	public static final int ROCKET_CARGO2_VALUE = 0;
 	public static final int ROCKET_CARGO3_VALUE = 0;
 	public static final int ELEVATOR_MAX_HEIGHT = 0;
+	*/
 }

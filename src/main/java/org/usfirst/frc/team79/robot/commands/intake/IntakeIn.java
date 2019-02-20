@@ -13,6 +13,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Sucks in the cargo (kickball)
 public class IntakeIn extends Command {
   // Called just before this Command runs the first time
   @Override

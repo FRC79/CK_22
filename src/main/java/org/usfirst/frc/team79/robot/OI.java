@@ -45,9 +45,6 @@ public class OI {
 	public Button gripperUnhug = new JoystickButton(drive, 5); //LB
 	public Button gripperHug = new JoystickButton(drive, 6); //RB
 
-	
-
-
 	// public Button elevatorToggle = new JoystickButton(operator, 10);
 
 	public OI() {

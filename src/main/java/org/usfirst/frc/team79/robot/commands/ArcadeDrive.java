@@ -13,9 +13,7 @@ public class ArcadeDrive extends Command{
 	// Called just before this Command runs the first time
 		@Override
 		protected void initialize() {
-			/*
-			 Resets the talons
-			*/
+			/* Resets the talons */
 			Robot.driveTrain.frontLeftMotor.configFactoryDefault();
 			Robot.driveTrain.frontRightMotor.configFactoryDefault();
 			Robot.driveTrain.backLeftMotor.configFactoryDefault();

@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Can move hugger back up to default and resting position
 public class GripperDeployUp extends Command {
   public GripperDeployUp() {
     // Use requires() here to declare subsystem dependencies

@@ -13,7 +13,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-
+//Used for manual control of elevator
 public class ControlElevator extends Command {
   public ControlElevator() {
     // Use requires() here to declare subsystem dependencies

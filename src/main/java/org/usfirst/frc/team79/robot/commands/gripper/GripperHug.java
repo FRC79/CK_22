@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Hugger grabs onto third HAB platform
 public class GripperHug extends Command {
   public GripperHug() {
     // Use requires() here to declare subsystem dependencies

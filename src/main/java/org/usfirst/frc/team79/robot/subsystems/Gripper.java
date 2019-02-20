@@ -19,8 +19,6 @@ public class Gripper extends Subsystem {
   public DoubleSolenoid grip;
   public DoubleSolenoid deploy;
   public TalonSRX motor;
-  // Put methods for controlling this subsystem
-  // here. Call these from Commands.
 
   public Gripper() {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);

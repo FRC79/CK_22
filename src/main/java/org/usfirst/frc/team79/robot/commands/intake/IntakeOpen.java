@@ -11,6 +11,7 @@ import org.usfirst.frc.team79.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+//Once intake arms are inside the inner circle of hatch this command is used to expand the intake arms and secure the hatch to the intake arm
 public class IntakeOpen extends Command {
   public IntakeOpen() {
     // Use requires() here to declare subsystem dependencies
