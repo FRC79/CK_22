@@ -16,6 +16,7 @@
 
 // import edu.wpi.first.wpilibj.command.Command;
 
+//Used for specific automatic control of elevator, ensuring that it stops at the 6 different levels on the rocket
 // public class ElevatorStoppingPoints extends Command {
   
 //   public int targetCount;
