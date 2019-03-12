@@ -23,9 +23,9 @@ public class ArcadeDrive extends Command{
 		// Called repeatedly when this Command is scheduled to run
 		@Override
 		protected void execute() {
-			double forward = -1.0  * Robot.oi.drive.getY(); //gets joystick values to move forward and back
+			double forward = 1.0  * Robot.oi.drive.getY(); //gets joystick values to move forward and back
 			//"-" makes forward	go forward on the joystick
-			double turn = Robot.oi.drive.getZ();    //turns left and right
+			double turn = Robot.oi.drive.getX();    //turns left and right
 			Robot.driveTrain.drive.arcadeDrive(forward, turn); //passes joystick values into drive mechanism
 		   
 		}
