@@ -7,7 +7,7 @@
 
 package org.usfirst.frc.team79.robot;
 
-import org.usfirst.frc.team79.robot.commands.elevator.PointSelection;
+import org.usfirst.frc.team79.robot.commands.elevator.ElevatorStopPoints;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployDown;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployUp;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperHug;
@@ -59,8 +59,8 @@ public class OI {
 		robotFlip.whileHeld(new RobotFlip());
 		robotUnflip.whileHeld(new RobotUnflip());
 
-		elevatorUp.whenPressed(new PointSelection());
-		elevatorDown.whenPressed(new PointSelection());
+		elevatorUp.whenPressed(new ElevatorStopPoints());
+		elevatorDown.whenPressed(new ElevatorStopPoints());
 	}
 	
 	//// CREATING BUTTONS
