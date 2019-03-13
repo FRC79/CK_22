@@ -10,6 +10,7 @@ package org.usfirst.frc.team79.robot.commands.elevator;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
 import org.usfirst.frc.team79.robot.Robot;
+import org.usfirst.frc.team79.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -35,6 +36,11 @@ public class ControlElevator extends Command {
     if(value > 0) {
       value = 0.5 * Robot.oi.operator.getY();
     }
+
+    if (Robot.MagEncoder.get() >= RobotMap.ELEVATOR_MAX_HEIGHT) {
+      value = 0;
+    }
+
     Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
     Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
   }
