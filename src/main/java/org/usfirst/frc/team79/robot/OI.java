@@ -7,6 +7,7 @@
 
 package org.usfirst.frc.team79.robot;
 
+import org.usfirst.frc.team79.robot.commands.elevator.PointSelection;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployDown;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperDeployUp;
 import org.usfirst.frc.team79.robot.commands.gripper.GripperHug;
@@ -35,8 +36,8 @@ public class OI {
 	public Button intakeIn = new JoystickButton(operator, 8); //RT
 	public Button intakeClose = new JoystickButton(operator, 5); //LB
 	public Button intakeOpen = new JoystickButton(operator, 6); //RB
-	// public Button elevatorUp = new JoystickButton(operator, 4); //Y
-	// public Button elevatorDown = new JoystickButton(operator, 2); //A
+	public Button elevatorUp = new JoystickButton(operator, 4); //Y
+	public Button elevatorDown = new JoystickButton(operator, 2); //A
 	public Button robotFlip = new JoystickButton(operator, 3); //B
 	public Button robotUnflip = new JoystickButton(operator, 1); //X
 	public Button gripperDown = new JoystickButton(operator, 4); //Y
@@ -44,8 +45,6 @@ public class OI {
 
 	public Button gripperUnhug = new JoystickButton(drive, 6); //LB
 	public Button gripperHug = new JoystickButton(drive, 7); //RB
-
-	// public Button elevatorToggle = new JoystickButton(operator, 10);
 
 	public OI() {
 		intakeIn.whileHeld(new IntakeIn());
@@ -59,7 +58,9 @@ public class OI {
 		gripperUp.whenPressed(new GripperDeployUp());
 		robotFlip.whileHeld(new RobotFlip());
 		robotUnflip.whileHeld(new RobotUnflip());
-		// elevatorToggle.toggleWhenPressed(new ControlElevator());
+
+		elevatorUp.whenPressed(new PointSelection());
+		elevatorDown.whenPressed(new PointSelection());
 	}
 	
 	//// CREATING BUTTONS

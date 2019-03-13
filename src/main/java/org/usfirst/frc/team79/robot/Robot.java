@@ -13,12 +13,12 @@ import org.usfirst.frc.team79.robot.subsystems.Gripper;
 import org.usfirst.frc.team79.robot.subsystems.Intake;
 
 import edu.wpi.first.wpilibj.Compressor;
-//import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
-// import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
 	public static Gripper gripper;
 	public static UsbCamera camera;
 	public static Compressor pump;
-	// public static Encoder MagEncoder; 
+	public static Encoder MagEncoder; 
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -56,7 +56,7 @@ public class Robot extends TimedRobot {
 		camera.setResolution(285, 180);
 		camera.setFPS(30);
 	
-		//MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X);
+		MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X);
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		//MagEncoder.reset();
+		MagEncoder.reset();
 	}
 
 	/**
@@ -96,12 +96,12 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
-		// SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
+		SmartDashboard.putNumber("Encoder Ticks", MagEncoder.get());
 	}
 
 	@Override
 	public void teleopInit() {
-		//MagEncoder.reset();		
+		MagEncoder.reset();		
 	}
 
 	/**

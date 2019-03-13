@@ -3,6 +3,7 @@ package org.usfirst.frc.team79.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
+import org.usfirst.frc.team79.robot.Robot;
 // import org.usfirst.frc.team79.robot.Robot;
 import org.usfirst.frc.team79.robot.RobotMap;
 import org.usfirst.frc.team79.robot.commands.elevator.ControlElevator;
@@ -17,7 +18,7 @@ public class Elevator extends Subsystem {
 	public Elevator() {
 		leftMotor = new TalonSRX(RobotMap.elevator1Talon);
 		rightMotor = new TalonSRX(RobotMap.elevator2Talon);
-		// Robot.MagEncoder.reset();
+		Robot.MagEncoder.reset();
 	}
 	
 	public void stopMotors() {
