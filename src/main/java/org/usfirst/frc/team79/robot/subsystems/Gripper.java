@@ -18,12 +18,15 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Gripper extends Subsystem {
   public DoubleSolenoid grip;
   public DoubleSolenoid deploy;
-  public TalonSRX motor;
+  public TalonSRX motor1;
+  public TalonSRX motor2;
 
   public Gripper() {
     grip = new DoubleSolenoid(RobotMap.GRIPPER_HUG, RobotMap.GRIPPER_UNHUG);
     deploy = new DoubleSolenoid(RobotMap.GRIPPER_DEPLOY_DOWN, RobotMap.GRIPPER_DEPLOY_UP);
-    motor = new TalonSRX(RobotMap.gripper1Talon);  
+    motor1 = new TalonSRX(RobotMap.gripper1Talon);
+    motor2 = new TalonSRX(RobotMap.gripper2Talon);
+
   }
 
   public void solenoidExpand(DoubleSolenoid solenoid) {
@@ -39,7 +42,8 @@ public class Gripper extends Subsystem {
   }
 
   public void stopMotor() {
-    motor.set(ControlMode.PercentOutput, 0);
+    motor1.set(ControlMode.PercentOutput, 0);
+    motor2.set(ControlMode.PercentOutput, 0);
   }
 
   @Override

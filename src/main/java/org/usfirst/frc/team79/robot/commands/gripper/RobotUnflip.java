@@ -23,13 +23,17 @@ public class RobotUnflip extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    Robot.gripper.motor.configFactoryDefault();
+    Robot.gripper.motor1.configFactoryDefault();
+    Robot.gripper.motor2.configFactoryDefault();
+
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.gripper.motor.set(ControlMode.PercentOutput, -0.25);
+    Robot.gripper.motor1.set(ControlMode.PercentOutput, -0.25);
+    Robot.gripper.motor2.set(ControlMode.PercentOutput, -0.25);
+
   }
 
   // Make this return true when this Command no longer needs to run execute()

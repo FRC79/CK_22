@@ -20,10 +20,10 @@ public class RobotMap {
 	public static final int frontRightDriveTalon = 2; 
 	public static final int backLeftDriveVictor= 3;
 	public static final int backRightDriveVictor = 4; 
-	public static final int gripper1Talon = 5;
-	// public static final int gripper2Talon = 6; //Not used
-	public static final int elevator1Talon = 7;
-	public static final int elevator2Talon = 8; 
+	public static final int gripper1Talon = 7;
+	public static final int gripper2Talon = 5; //Not used
+	public static final int elevator1Talon = 8;
+	public static final int elevator2Talon = 6; 
 	public static final int rightIntakeTalon = 9; 
 	public static final int leftIntakeTalon = 10;
 
@@ -35,7 +35,7 @@ public class RobotMap {
 	public static final int INTAKE_CLOSE = 4;
 	public static final int INTAKE_OPEN = 5;
 
-	/*
+	
 	//Digital Input
 	public static final int ENCODER_A_CHANNEL = 0; 
 	public static final int ENCORDER_B_CHANNEL = 1;
@@ -48,5 +48,6 @@ public class RobotMap {
 	public static final int ROCKET_CARGO2_VALUE = 0;
 	public static final int ROCKET_CARGO3_VALUE = 0;
 	public static final int ELEVATOR_MAX_HEIGHT = 0;
-	*/
+	public static final int ELEVATOR_MIN_HEIGHT = 0;
+
 }

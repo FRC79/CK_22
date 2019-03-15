@@ -10,6 +10,7 @@ package org.usfirst.frc.team79.robot.commands.elevator;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
 import org.usfirst.frc.team79.robot.Robot;
+import org.usfirst.frc.team79.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -30,13 +31,13 @@ public class ControlElevator extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = Robot.oi.operator.getY();
-
-    if(value > 0) {
-      value = 0.5 * Robot.oi.operator.getY();
-    }
+    double value = -Robot.oi.operator.getY();
     Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
     Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
+
+    // if(Robot.MagEncoder.get() <= RobotMap.ELEVATOR_MIN_HEIGHT) {
+    //   Robot.elevator.stopMotors();
+    // }
   }
 
   // Make this return true when this Command no longer needs to run execute()
