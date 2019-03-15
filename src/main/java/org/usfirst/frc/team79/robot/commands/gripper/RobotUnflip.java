@@ -31,8 +31,8 @@ public class RobotUnflip extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.gripper.motor1.set(ControlMode.PercentOutput, -1);
-    Robot.gripper.motor2.set(ControlMode.PercentOutput, -1);
+    Robot.gripper.motor1.set(ControlMode.PercentOutput, 1);
+    Robot.gripper.motor2.set(ControlMode.PercentOutput, 1);
 
   }
 

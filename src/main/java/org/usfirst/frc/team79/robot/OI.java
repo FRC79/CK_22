@@ -31,8 +31,8 @@ public class OI {
 	public Joystick drive = new Joystick(0); //Initializes joystick
 	public Joystick operator = new Joystick(1); 
 
-	public Button intakeOut = new JoystickButton(operator, 7); //LT
-	public Button intakeIn = new JoystickButton(operator, 8); //RT
+	public Button intakeOut = new JoystickButton(operator, 8); //RT
+	public Button intakeIn = new JoystickButton(operator, 7); //LT
 	public Button intakeClose = new JoystickButton(operator, 5); //LB
 	public Button intakeOpen = new JoystickButton(operator, 6); //RB
 	// public Button elevatorUp = new JoystickButton(operator, 4); //Y
