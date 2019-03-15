@@ -12,17 +12,14 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 //creates subsystem to control elevator
 public class Elevator extends Subsystem {
 
-	public TalonSRX leftMotor;
-	public TalonSRX rightMotor;
+	public TalonSRX motor;
 	public Elevator() {
-		leftMotor = new TalonSRX(RobotMap.elevator1Talon);
-		rightMotor = new TalonSRX(RobotMap.elevator2Talon);
+		motor = new TalonSRX(RobotMap.elevator1Talon);
 		// Robot.MagEncoder.reset();
 	}
 	
 	public void stopMotors() {
-		leftMotor.set(ControlMode.PercentOutput, 0);
-		rightMotor.set(ControlMode.PercentOutput, 0);
+		motor.set(ControlMode.PercentOutput, 0);
 	}
 	
 	@Override

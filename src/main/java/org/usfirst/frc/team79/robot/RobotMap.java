@@ -22,8 +22,8 @@ public class RobotMap {
 	public static final int backRightDriveVictor = 4; 
 	public static final int gripper1Talon = 7;
 	public static final int gripper2Talon = 5; //Not used
-	public static final int elevator1Talon = 8;
-	public static final int elevator2Talon = 6; 
+	public static final int elevator1Talon = 6;
+	// public static final int elevator2Talon = 8; 
 	public static final int rightIntakeTalon = 9; 
 	public static final int leftIntakeTalon = 10;
 

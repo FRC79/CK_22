@@ -24,16 +24,14 @@ public class ControlElevator extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    Robot.elevator.leftMotor.configFactoryDefault();
-    Robot.elevator.rightMotor.configFactoryDefault();
+    Robot.elevator.motor.configFactoryDefault();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double value = -Robot.oi.operator.getY();
-    Robot.elevator.leftMotor.set(ControlMode.PercentOutput, value);
-    Robot.elevator.rightMotor.set(ControlMode.PercentOutput, value);
+    double value = Robot.oi.operator.getY();
+    Robot.elevator.motor.set(ControlMode.PercentOutput, value);
 
     // if(Robot.MagEncoder.get() <= RobotMap.ELEVATOR_MIN_HEIGHT) {
     //   Robot.elevator.stopMotors();
