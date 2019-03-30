@@ -20,20 +20,23 @@ public class RobotMap {
 	public static final int frontRightDriveTalon = 2; 
 	public static final int backLeftDriveVictor= 3;
 	public static final int backRightDriveVictor = 4; 
-	public static final int gripper1Talon = 7;
-	public static final int gripper2Talon = 5; //Not used
+
 	public static final int elevator1Talon = 6;
 	// public static final int elevator2Talon = 8; 
+	
 	public static final int rightIntakeTalon = 9; 
 	public static final int leftIntakeTalon = 10;
 
+	// public static final int gripper1Talon = 7;
+	// public static final int gripper2Talon = 5; 
+
 	//Pneumatics
-	public static final int GRIPPER_HUG = 0;
-	public static final int GRIPPER_UNHUG = 1;
-	public static final int GRIPPER_DEPLOY_DOWN = 2;
-	public static final int GRIPPER_DEPLOY_UP = 3;
-	public static final int INTAKE_CLOSE = 4;
-	public static final int INTAKE_OPEN = 5;
+	public static final int INTAKE_OPEN = 0;
+	public static final int INTAKE_CLOSE = 1;
+	// public static final int GRIPPER_HUG = 0;
+	// public static final int GRIPPER_UNHUG = 1;
+	// public static final int GRIPPER_DEPLOY_DOWN = 2;
+	// public static final int GRIPPER_DEPLOY_UP = 3;
 
 	
 	//Digital Input
