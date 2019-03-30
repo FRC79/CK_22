@@ -9,7 +9,7 @@ package org.usfirst.frc.team79.robot;
 
 import org.usfirst.frc.team79.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team79.robot.subsystems.Elevator;
-import org.usfirst.frc.team79.robot.subsystems.Gripper;
+// import org.usfirst.frc.team79.robot.subsystems.Gripper;
 import org.usfirst.frc.team79.robot.subsystems.Intake;
 
 import edu.wpi.first.wpilibj.Compressor;
@@ -32,8 +32,9 @@ public class Robot extends TimedRobot {
 	public static DriveTrain driveTrain;
 	public static Elevator elevator;
 	public static Intake intake;
-	public static Gripper gripper;
-	public static UsbCamera camera;
+	// public static Gripper gripper;
+	public static UsbCamera camera1;
+	public static UsbCamera camera2;
 	public static Compressor pump;
 	// public static Encoder MagEncoder; 
 
@@ -48,13 +49,17 @@ public class Robot extends TimedRobot {
 		oi = new OI();
 		elevator = new Elevator();
 		intake = new Intake();
-		gripper = new Gripper();
+		// gripper = new Gripper();
 		pump = new Compressor(0);
 		pump.setClosedLoopControl(true); //might have to move to Teleopinit
 
-		camera = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
-		camera.setResolution(285, 180);
-		camera.setFPS(30);
+		camera1 = CameraServer.getInstance().startAutomaticCapture(0); //displays camera on drive station 
+		camera1.setResolution(160, 120);
+		camera1.setFPS(30);
+
+		camera2 = CameraServer.getInstance().startAutomaticCapture(1); //displays camera on drive station 
+		camera2.setResolution(160, 120);
+		camera2.setFPS(30);
 	
 		//MagEncoder = new Encoder(RobotMap.ENCODER_A_CHANNEL, RobotMap.ENCORDER_B_CHANNEL, false, Encoder.EncodingType.k4X);
 	}
